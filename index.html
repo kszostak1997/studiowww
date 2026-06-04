@@ -3,8 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudioWWW – Strony internetowe</title>
-  <meta name="description" content="StudioWWW – profesjonalne strony internetowe, sklepy e-commerce i SEO. Portfolio website studio." />
+
+  <!-- ═══ SEO – Homepage ═══ -->
+  <title>StudioWWW – Strony internetowe Warszawa | Agencja Internetowa</title>
+  <meta name="description" content="StudioWWW to agencja internetowa z Warszawy. Tworzymy profesjonalne strony internetowe, sklepy e-commerce i strategie SEO dla firm, które chcą rosnąć. Bezpłatna wycena w 3 dni." />
+  <link rel="canonical" href="https://studiowww.pl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://studiowww.pl/" />
+  <meta property="og:title"       content="StudioWWW – Strony internetowe Warszawa" />
+  <meta property="og:description" content="Profesjonalne strony internetowe, sklepy e-commerce i SEO. Bezpłatna wycena w 3 dni." />
+  <meta property="og:locale"      content="pl_PL" />
+  <meta property="og:site_name"   content="StudioWWW" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="StudioWWW – Strony internetowe Warszawa" />
+  <meta name="twitter:description" content="Profesjonalne strony internetowe, sklepy e-commerce i SEO. Bezpłatna wycena w 3 dni." />
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "StudioWWW",
+    "url": "https://studiowww.pl",
+    "logo": "https://studiowww.pl/assets/logo.png",
+    "description": "Agencja internetowa z Warszawy specjalizująca się w tworzeniu stron internetowych, sklepów e-commerce i SEO.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Warszawa",
+      "addressCountry": "PL"
+    },
+    "telephone": "+48500123456",
+    "email": "hello@studiowww.pl",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "priceRange": "PLN",
+    "areaServed": "PL",
+    "sameAs": []
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -25,137 +65,63 @@
       --nav-h:      64px;
       font-size: 16px;
     }
-
-    /* ─── RESET ───────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--c-bg);
-      color: var(--c-ink);
-      line-height: 1.65;
-      font-weight: 300;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--c-bg); color: var(--c-ink); line-height: 1.65; font-weight: 300; -webkit-font-smoothing: antialiased; }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
     button { cursor: pointer; font-family: inherit; }
-
-    /* ─── TYPOGRAPHY ──────────────────────────────────────── */
     h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: 1.15; }
     h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); }
     h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
     h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
     p  { max-width: 62ch; }
-
-    /* ─── LAYOUT HELPERS ──────────────────────────────────── */
     .container { width: min(var(--max), 100% - 2 * var(--gap)); margin-inline: auto; }
     .section { padding: clamp(4rem, 10vw, 8rem) 0; }
     .section--alt { background: var(--c-surface); }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px,100%), 1fr)); gap: var(--gap); }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px,100%), 1fr)); gap: var(--gap); }
-    .tag {
-      display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--c-accent); border: 1px solid var(--c-accent); border-radius: 2rem;
-      padding: .25rem .75rem; margin-bottom: 1rem;
-    }
-    .label { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c-mid); }
+    .tag { display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--c-accent); border: 1px solid var(--c-accent); border-radius: 2rem; padding: .25rem .75rem; margin-bottom: 1rem; }
 
     /* ─── NAVIGATION ──────────────────────────────────────── */
-    nav {
-      position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 100;
-      display: flex; align-items: center;
-      background: rgba(245, 243, 239, .92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--c-border);
-    }
-    .nav-inner {
-      width: min(var(--max), 100% - 2 * var(--gap)); margin-inline: auto;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    }
-    .logo {
-      font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: -.01em;
-      color: var(--c-ink); display: flex; align-items: center; gap: .4rem;
-    }
+    nav { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 100; display: flex; align-items: center; background: rgba(245,243,239,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--c-border); }
+    .nav-inner { width: min(var(--max), 100% - 2 * var(--gap)); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: -.01em; color: var(--c-ink); display: flex; align-items: center; gap: .4rem; }
     .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-accent); flex-shrink: 0; }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-size: .875rem; letter-spacing: .03em; color: var(--c-mid);
-      transition: color .2s; position: relative;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1px;
-      background: var(--c-accent); transform: scaleX(0); transform-origin: left;
-      transition: transform .2s;
-    }
+    .nav-links a { font-size: .875rem; letter-spacing: .03em; color: var(--c-mid); transition: color .2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1px; background: var(--c-accent); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
     .nav-links a:hover { color: var(--c-ink); }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
     .nav-links a.active { color: var(--c-ink); font-weight: 500; }
     .nav-right { display: flex; align-items: center; gap: 1rem; }
-    .lang-btn {
-      font-size: .75rem; letter-spacing: .08em; text-transform: uppercase;
-      color: var(--c-mid); border: 1px solid var(--c-border); background: transparent;
-      padding: .3rem .6rem; border-radius: var(--r); transition: all .2s;
-    }
+    .lang-btn { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--c-mid); border: 1px solid var(--c-border); background: transparent; padding: .3rem .6rem; border-radius: var(--r); transition: all .2s; }
     .lang-btn:hover, .lang-btn.active { background: var(--c-ink); color: var(--c-white); border-color: var(--c-ink); }
-    .btn-nav {
-      font-size: .8rem; font-weight: 500; letter-spacing: .06em;
-      background: var(--c-accent); color: var(--c-white);
-      border: none; border-radius: var(--r); padding: .5rem 1.2rem;
-      transition: background .2s, transform .15s;
-    }
+    .btn-nav { font-size: .8rem; font-weight: 500; letter-spacing: .06em; background: var(--c-accent); color: var(--c-white); border: none; border-radius: var(--r); padding: .5rem 1.2rem; transition: background .2s, transform .15s; }
     .btn-nav:hover { background: #234a31; transform: translateY(-1px); }
-
-    /* hamburger */
     .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--c-ink); transition: transform .3s, opacity .3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    /* ─── PAGES ───────────────────────────────────────────── */
-    .page { display: none; }
-    .page.active { display: block; }
-    .page-top { padding-top: var(--nav-h); }
+    .mobile-menu { position: fixed; inset: var(--nav-h) 0 0 0; background: var(--c-white); z-index: 99; display: flex; flex-direction: column; padding: 2rem var(--gap); gap: 1rem; transform: translateX(100%); transition: transform .3s; }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a { font-size: 1.2rem; padding: .75rem 0; border-bottom: 1px solid var(--c-border); color: var(--c-ink); }
+    .mobile-lang { display: flex; gap: .5rem; margin-top: auto; }
 
     /* ─── HERO ────────────────────────────────────────────── */
-    .hero {
-      padding-top: calc(var(--nav-h) + clamp(3rem, 8vw, 6rem));
-      padding-bottom: clamp(4rem, 10vw, 8rem);
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(45,90,61,.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    .hero { padding-top: calc(var(--nav-h) + clamp(3rem,8vw,6rem)); padding-bottom: clamp(4rem,10vw,8rem); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(45,90,61,.06) 0%, transparent 70%); pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: center; }
     .hero-eyebrow { font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; color: var(--c-accent); margin-bottom: 1.2rem; }
     .hero h1 { margin-bottom: 1.5rem; }
     .hero-sub { font-size: 1.1rem; color: var(--c-mid); margin-bottom: 2.5rem; }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      font-size: .875rem; font-weight: 500; letter-spacing: .05em;
-      background: var(--c-accent); color: var(--c-white);
-      border: none; border-radius: var(--r); padding: .85rem 2rem;
-      transition: background .2s, transform .15s; display: inline-block;
-    }
+    .btn-primary { font-size: .875rem; font-weight: 500; letter-spacing: .05em; background: var(--c-accent); color: var(--c-white); border: none; border-radius: var(--r); padding: .85rem 2rem; transition: background .2s, transform .15s; display: inline-block; }
     .btn-primary:hover { background: #234a31; transform: translateY(-2px); }
-    .btn-outline {
-      font-size: .875rem; font-weight: 400; letter-spacing: .05em;
-      background: transparent; color: var(--c-ink);
-      border: 1px solid var(--c-border); border-radius: var(--r); padding: .85rem 2rem;
-      transition: border-color .2s, color .2s, transform .15s; display: inline-block;
-    }
+    .btn-outline { font-size: .875rem; font-weight: 400; letter-spacing: .05em; background: transparent; color: var(--c-ink); border: 1px solid var(--c-border); border-radius: var(--r); padding: .85rem 2rem; transition: border-color .2s, color .2s, transform .15s; display: inline-block; }
     .btn-outline:hover { border-color: var(--c-ink); transform: translateY(-2px); }
-
-    /* hero visual */
-    .hero-visual {
-      aspect-ratio: 4/3; border-radius: 12px; overflow: hidden;
-      background: var(--c-surface); position: relative; border: 1px solid var(--c-border);
-    }
-    .hero-mockup {
-      position: absolute; inset: 0; display: flex; flex-direction: column;
-    }
+    .hero-visual { aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; background: var(--c-surface); position: relative; border: 1px solid var(--c-border); }
+    .hero-mockup { position: absolute; inset: 0; display: flex; flex-direction: column; }
     .mock-bar { height: 32px; background: var(--c-border); display: flex; align-items: center; padding: 0 12px; gap: 6px; }
     .mock-dot { width: 9px; height: 9px; border-radius: 50%; }
     .mock-dot:nth-child(1) { background: #e57373; }
@@ -167,161 +133,24 @@
     .mock-card { flex: 1; height: 50px; background: var(--c-border); border-radius: 6px; }
     .mock-line { height: 8px; background: var(--c-border); border-radius: 4px; width: 70%; }
     .mock-line.short { width: 45%; }
-
-    /* stats */
     .hero-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--c-border); flex-wrap: wrap; }
     .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--c-ink); line-height: 1; }
     .stat-lbl { font-size: .75rem; color: var(--c-mid); margin-top: .25rem; }
 
-    /* ─── ABOUT ───────────────────────────────────────────── */
-    .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: calc(var(--gap) * 2); align-items: start; }
-    .about-sticky { position: sticky; top: calc(var(--nav-h) + 2rem); }
-    .about-photo {
-      width: 100%; aspect-ratio: 3/4; border-radius: 12px;
-      background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-border) 100%);
-      position: relative; overflow: hidden; border: 1px solid var(--c-border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .about-photo-inner { text-align: center; }
-    .about-photo-letter {
-      font-family: 'DM Serif Display', serif; font-size: 6rem; color: var(--c-border);
-      line-height: 1; display: block;
-    }
-    .values-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
-    .value-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .value-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--c-surface); border: 1px solid var(--c-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
-    .value-text h4 { font-family: 'DM Serif Display', serif; font-size: 1rem; margin-bottom: .2rem; }
-    .value-text p { font-size: .875rem; color: var(--c-mid); max-width: none; }
-
-    /* ─── SERVICES ────────────────────────────────────────── */
-    .services-intro { max-width: 52ch; }
-    .service-card {
-      background: var(--c-white); border: 1px solid var(--c-border); border-radius: 12px;
-      padding: 2rem; transition: box-shadow .3s, transform .2s; position: relative; overflow: hidden;
-    }
-    .service-card::after {
-      content: ''; position: absolute; inset: 0 0 auto 0; height: 3px;
-      background: var(--c-accent); transform: scaleX(0); transform-origin: left;
-      transition: transform .3s;
-    }
+    /* ─── SERVICE CARDS ───────────────────────────────────── */
+    .service-card { background: var(--c-white); border: 1px solid var(--c-border); border-radius: 12px; padding: 2rem; transition: box-shadow .3s, transform .2s; position: relative; overflow: hidden; }
+    .service-card::after { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--c-accent); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
     .service-card:hover { box-shadow: 0 8px 32px rgba(26,25,22,.08); transform: translateY(-4px); }
     .service-card:hover::after { transform: scaleX(1); }
     .service-icon { font-size: 1.8rem; margin-bottom: 1.2rem; }
     .service-card h3 { margin-bottom: .5rem; }
     .service-card p { font-size: .9rem; color: var(--c-mid); margin-bottom: 1.2rem; }
-    .service-price {
-      font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--c-accent);
-      border-top: 1px solid var(--c-border); padding-top: 1rem; margin-top: auto;
-    }
+    .service-price { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--c-accent); border-top: 1px solid var(--c-border); padding-top: 1rem; margin-top: auto; }
     .service-card-inner { display: flex; flex-direction: column; height: 100%; }
 
-    /* ─── PORTFOLIO ───────────────────────────────────────── */
-    .portfolio-filter { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .filter-btn {
-      font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
-      border: 1px solid var(--c-border); background: transparent; color: var(--c-mid);
-      border-radius: 2rem; padding: .4rem 1rem; transition: all .2s;
-    }
-    .filter-btn:hover, .filter-btn.active { background: var(--c-ink); color: var(--c-white); border-color: var(--c-ink); }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px,100%), 1fr)); gap: var(--gap); }
-    .portfolio-item {
-      border-radius: 12px; overflow: hidden; border: 1px solid var(--c-border);
-      background: var(--c-white); transition: transform .25s, box-shadow .25s;
-      cursor: pointer;
-    }
-    .portfolio-item:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(26,25,22,.1); }
-    .portfolio-thumb {
-      aspect-ratio: 16/10; overflow: hidden; position: relative;
-      background: var(--c-surface); display: flex; align-items: center; justify-content: center;
-    }
-    .portfolio-thumb-inner {
-      width: 90%; height: 80%; border-radius: 6px; border: 1px solid var(--c-border);
-      display: flex; flex-direction: column; overflow: hidden;
-    }
-    .port-bar { height: 20px; background: var(--c-border); display: flex; align-items: center; padding: 0 8px; gap: 4px; }
-    .port-dot { width: 6px; height: 6px; border-radius: 50%; }
-    .port-body { flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 10px; }
-    .port-hero { height: 30px; border-radius: 4px; }
-    .port-row { display: flex; gap: 4px; }
-    .port-col { flex: 1; height: 20px; border-radius: 4px; opacity: .5; }
-    .port-line { height: 5px; border-radius: 3px; width: 60%; }
-    .portfolio-meta { padding: 1.2rem 1.4rem; }
-    .portfolio-meta h3 { font-size: 1rem; margin-bottom: .3rem; }
-    .portfolio-meta p { font-size: .8rem; color: var(--c-mid); }
-    .portfolio-meta .tag { margin-top: .6rem; margin-bottom: 0; font-size: .65rem; }
-
-    /* ─── PROCESS ─────────────────────────────────────────── */
-    .process-list { display: flex; flex-direction: column; gap: 0; }
-    .process-step {
-      display: grid; grid-template-columns: 64px 1fr; gap: 2rem; padding: 2rem 0;
-      border-bottom: 1px solid var(--c-border); align-items: start;
-      transition: background .2s;
-    }
-    .process-step:last-child { border-bottom: none; }
-    .step-num {
-      width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--c-border);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--c-accent);
-      flex-shrink: 0;
-    }
-    .step-content h3 { font-size: 1.15rem; margin-bottom: .4rem; }
-    .step-content p { font-size: .9rem; color: var(--c-mid); }
-
-    /* ─── CONTACT ─────────────────────────────────────────── */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: calc(var(--gap) * 2); align-items: start; }
-    .contact-info { position: sticky; top: calc(var(--nav-h) + 2rem); }
-    .contact-info h2 { margin-bottom: 1rem; }
-    .contact-info p { color: var(--c-mid); margin-bottom: 2rem; }
-    .contact-details { display: flex; flex-direction: column; gap: 1rem; }
-    .contact-detail { display: flex; align-items: center; gap: 1rem; }
-    .contact-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--c-surface); border: 1px solid var(--c-border); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .contact-detail-text small { display: block; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--c-mid); }
-    .contact-detail-text span { font-size: .95rem; }
-
-    /* form */
-    .form-card { background: var(--c-white); border: 1px solid var(--c-border); border-radius: 16px; padding: 2.5rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.2rem; }
-    .form-group label { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--c-mid); }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      font-family: 'DM Sans', sans-serif; font-size: .9rem; font-weight: 300;
-      background: var(--c-bg); border: 1px solid var(--c-border); color: var(--c-ink);
-      border-radius: var(--r); padding: .7rem 1rem; width: 100%;
-      transition: border-color .2s, box-shadow .2s; resize: vertical;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none; border-color: var(--c-accent);
-      box-shadow: 0 0 0 3px rgba(45,90,61,.1);
-    }
-    .form-group textarea { min-height: 120px; }
-    .btn-submit {
-      width: 100%; font-family: 'DM Sans', sans-serif; font-size: .875rem; font-weight: 500; letter-spacing: .06em;
-      background: var(--c-accent); color: var(--c-white);
-      border: none; border-radius: var(--r); padding: 1rem 2rem;
-      transition: background .2s, transform .15s;
-    }
-    .btn-submit:hover { background: #234a31; transform: translateY(-1px); }
-    .form-success {
-      display: none; text-align: center; padding: 3rem 2rem;
-    }
-    .form-success .success-icon { font-size: 3rem; margin-bottom: 1rem; }
-    .form-success h3 { margin-bottom: .5rem; }
-    .form-success p { color: var(--c-mid); font-size: .9rem; }
-
     /* ─── FOOTER ──────────────────────────────────────────── */
-    footer {
-      background: var(--c-ink); color: var(--c-white);
-      padding: 3rem 0 2rem;
-    }
-    .footer-inner {
-      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--gap);
-      padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.1);
-      margin-bottom: 1.5rem;
-    }
+    footer { background: var(--c-ink); color: var(--c-white); padding: 3rem 0 2rem; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--gap); padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 1.5rem; }
     .footer-brand .logo { color: var(--c-white); margin-bottom: 1rem; }
     .footer-brand p { font-size: .875rem; color: rgba(255,255,255,.5); max-width: 32ch; }
     .footer-col h4 { font-family: 'DM Serif Display', serif; font-size: 1rem; margin-bottom: 1rem; }
@@ -331,22 +160,9 @@
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.4); }
 
-    /* ─── MOBILE MENU ─────────────────────────────────────── */
-    .mobile-menu {
-      position: fixed; inset: var(--nav-h) 0 0 0; background: var(--c-white);
-      z-index: 99; display: flex; flex-direction: column; padding: 2rem var(--gap);
-      gap: 1rem; transform: translateX(100%); transition: transform .3s;
-    }
-    .mobile-menu.open { transform: translateX(0); }
-    .mobile-menu a { font-size: 1.2rem; padding: .75rem 0; border-bottom: 1px solid var(--c-border); color: var(--c-ink); }
-    .mobile-lang { display: flex; gap: .5rem; margin-top: auto; }
-
     /* ─── ANIMATIONS ──────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up { animation: fadeUp .6s ease both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up   { animation: fadeUp .6s ease both; }
     .fade-up-2 { animation: fadeUp .6s .15s ease both; }
     .fade-up-3 { animation: fadeUp .6s .3s ease both; }
     .fade-up-4 { animation: fadeUp .6s .45s ease both; }
@@ -357,116 +173,65 @@
       .hamburger { display: flex; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-sticky { position: static; }
-      .about-photo { aspect-ratio: 4/3; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .contact-info { position: static; }
-      .form-row { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
       .hero-stats { gap: 1.5rem; }
     }
-
-    /* portfolio color themes */
-    .pt-a .port-hero { background: #2D5A3D; }
-    .pt-a .port-col  { background: #C8A96B; }
-    .pt-a .port-dot:nth-child(1) { background: #e57373; }
-    .pt-a .port-dot:nth-child(2) { background: #ffb74d; }
-    .pt-a .port-dot:nth-child(3) { background: #81c784; }
-    .pt-a .port-line { background: var(--c-border); }
-
-    .pt-b .port-hero { background: #1E3A5F; }
-    .pt-b .port-col  { background: #4A90D9; }
-    .pt-b .port-dot:nth-child(1) { background: #e57373; }
-    .pt-b .port-dot:nth-child(2) { background: #ffb74d; }
-    .pt-b .port-dot:nth-child(3) { background: #81c784; }
-    .pt-b .port-line { background: var(--c-border); }
-
-    .pt-c .port-hero { background: #5C3D7A; }
-    .pt-c .port-col  { background: #A678C8; }
-    .pt-c .port-dot:nth-child(1) { background: #e57373; }
-    .pt-c .port-dot:nth-child(2) { background: #ffb74d; }
-    .pt-c .port-dot:nth-child(3) { background: #81c784; }
-    .pt-c .port-line { background: var(--c-border); }
-
-    .pt-d .port-hero { background: #7A3D3D; }
-    .pt-d .port-col  { background: #E07C7C; }
-    .pt-d .port-dot:nth-child(1) { background: #e57373; }
-    .pt-d .port-dot:nth-child(2) { background: #ffb74d; }
-    .pt-d .port-dot:nth-child(3) { background: #81c784; }
-    .pt-d .port-line { background: var(--c-border); }
-
-    .pt-e .port-hero { background: #2D5A6A; }
-    .pt-e .port-col  { background: #5AACB4; }
-    .pt-e .port-dot:nth-child(1) { background: #e57373; }
-    .pt-e .port-dot:nth-child(2) { background: #ffb74d; }
-    .pt-e .port-dot:nth-child(3) { background: #81c784; }
-    .pt-e .port-line { background: var(--c-border); }
   </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════
-     NAVIGATION
-════════════════════════════════════════════════════════════ -->
-<nav>
+<!-- ═══ NAVIGATION ═══ -->
+<nav aria-label="Nawigacja główna">
   <div class="nav-inner">
-    <a class="logo" href="#" onclick="navigate('home');return false;">
-      <span class="logo-dot"></span>
+    <a class="logo" href="/" aria-label="StudioWWW – strona główna">
+      <span class="logo-dot" aria-hidden="true"></span>
       StudioWWW
     </a>
-
-    <ul class="nav-links">
-      <li><a href="#" onclick="navigate('home');return false;" data-nav="home" data-pl="Start" data-en="Home">Start</a></li>
-      <li><a href="#" onclick="navigate('about');return false;" data-nav="about" data-pl="O nas" data-en="About">O nas</a></li>
-      <li><a href="#" onclick="navigate('services');return false;" data-nav="services" data-pl="Usługi" data-en="Services">Usługi</a></li>
-      <li><a href="#" onclick="navigate('portfolio');return false;" data-nav="portfolio" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
-      <li><a href="#" onclick="navigate('contact');return false;" data-nav="contact" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+    <ul class="nav-links" role="list">
+      <li><a href="/"         class="active" aria-current="page" data-pl="Start"    data-en="Home">Start</a></li>
+      <li><a href="/o-nas/"                                       data-pl="O nas"    data-en="About">O nas</a></li>
+      <li><a href="/uslugi/"                                      data-pl="Usługi"   data-en="Services">Usługi</a></li>
+      <li><a href="/portfolio/"                                   data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
+      <li><a href="/kontakt/"                                     data-pl="Kontakt"  data-en="Contact">Kontakt</a></li>
     </ul>
-
     <div class="nav-right">
-      <button class="lang-btn active" id="btn-pl" onclick="setLang('pl')">PL</button>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="btn-nav" onclick="navigate('contact');return false;" data-pl="Wycena" data-en="Get a quote">Wycena</button>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="lang-btn active" id="btn-pl" onclick="setLang('pl')" aria-label="Język polski">PL</button>
+      <button class="lang-btn"        id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+      <a class="btn-nav" href="/kontakt/" data-pl="Wycena" data-en="Get a quote">Wycena</a>
     </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#" onclick="navigate('home');closeMenu();return false;" data-pl="Start" data-en="Home">Start</a>
-  <a href="#" onclick="navigate('about');closeMenu();return false;" data-pl="O nas" data-en="About">O nas</a>
-  <a href="#" onclick="navigate('services');closeMenu();return false;" data-pl="Usługi" data-en="Services">Usługi</a>
-  <a href="#" onclick="navigate('portfolio');closeMenu();return false;" data-pl="Portfolio" data-en="Portfolio">Portfolio</a>
-  <a href="#" onclick="navigate('contact');closeMenu();return false;" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobilne">
+  <a href="/"           data-pl="Start"     data-en="Home">Start</a>
+  <a href="/o-nas/"     data-pl="O nas"     data-en="About">O nas</a>
+  <a href="/uslugi/"    data-pl="Usługi"    data-en="Services">Usługi</a>
+  <a href="/portfolio/" data-pl="Portfolio" data-en="Portfolio">Portfolio</a>
+  <a href="/kontakt/"   data-pl="Kontakt"   data-en="Contact">Kontakt</a>
   <div class="mobile-lang">
     <button class="lang-btn active" id="btn-pl-m" onclick="setLang('pl')">PL</button>
-    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btn-en-m" onclick="setLang('en')">EN</button>
   </div>
 </div>
 
+<main>
 
-<!-- ═══════════════════════════════════════════════════════════
-     PAGE: HOME
-════════════════════════════════════════════════════════════ -->
-<div class="page active page-top" id="page-home">
-
-  <!-- HERO -->
-  <section class="hero">
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" aria-labelledby="hero-heading">
     <div class="container">
       <div class="hero-grid">
         <div>
           <p class="hero-eyebrow fade-up" data-pl="Agencja internetowa · Warszawa" data-en="Web Studio · Warsaw">Agencja internetowa · Warszawa</p>
-          <h1 class="fade-up-2" data-pl="Strony, które<br>pracują na Twój sukces" data-en="Websites that<br>work for your success">Strony, które<br>pracują na Twój sukces</h1>
+          <h1 id="hero-heading" class="fade-up-2" data-pl="Strony, które<br>pracują na Twój sukces" data-en="Websites that<br>work for your success">Strony, które<br>pracują na Twój sukces</h1>
           <p class="hero-sub fade-up-3" data-pl="Tworzymy nowoczesne strony internetowe, sklepy e-commerce i strategie SEO dla firm, które chcą rosnąć." data-en="We build modern websites, e-commerce stores and SEO strategies for businesses that want to grow.">Tworzymy nowoczesne strony internetowe, sklepy e-commerce i strategie SEO dla firm, które chcą rosnąć.</p>
           <div class="hero-ctas fade-up-4">
-            <button class="btn-primary" onclick="navigate('contact')" data-pl="Zamów wycenę" data-en="Get a quote">Zamów wycenę</button>
-            <button class="btn-outline" onclick="navigate('portfolio')" data-pl="Zobacz realizacje" data-en="See our work">Zobacz realizacje</button>
+            <a class="btn-primary" href="/kontakt/" data-pl="Zamów wycenę" data-en="Get a quote">Zamów wycenę</a>
+            <a class="btn-outline"  href="/portfolio/" data-pl="Zobacz realizacje" data-en="See our work">Zobacz realizacje</a>
           </div>
-          <div class="hero-stats fade-up-4">
+          <div class="hero-stats fade-up-4" aria-label="Statystyki">
             <div>
               <div class="stat-num">40+</div>
               <div class="stat-lbl" data-pl="Zrealizowanych projektów" data-en="Completed projects">Zrealizowanych projektów</div>
@@ -481,12 +246,10 @@
             </div>
           </div>
         </div>
-        <div>
+        <div aria-hidden="true">
           <div class="hero-visual">
             <div class="hero-mockup">
-              <div class="mock-bar">
-                <div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div>
-              </div>
+              <div class="mock-bar"><div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div></div>
               <div class="mock-body">
                 <div class="mock-hero-block" style="opacity:.25;background:var(--c-accent)"></div>
                 <div class="mock-row">
@@ -509,24 +272,24 @@
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="section section--alt">
+  <!-- ═══ WHY US ═══ -->
+  <section class="section section--alt" aria-labelledby="why-heading">
     <div class="container">
       <span class="tag" data-pl="Dlaczego StudioWWW" data-en="Why StudioWWW">Dlaczego StudioWWW</span>
-      <h2 style="margin-bottom:3rem" data-pl="Podejście, które robi różnicę" data-en="An approach that makes a difference">Podejście, które robi różnicę</h2>
+      <h2 id="why-heading" style="margin-bottom:3rem" data-pl="Podejście, które robi różnicę" data-en="An approach that makes a difference">Podejście, które robi różnicę</h2>
       <div class="grid-3">
         <div class="service-card">
-          <div class="service-icon">🎯</div>
+          <div class="service-icon" aria-hidden="true">🎯</div>
           <h3 data-pl="Cel = sprzedaż" data-en="Goal = sales">Cel = sprzedaż</h3>
           <p data-pl="Każda decyzja projektowa służy jednemu celowi – pozyskaniu klientów dla Twojej firmy." data-en="Every design decision serves one goal – getting customers for your business.">Każda decyzja projektowa służy jednemu celowi – pozyskaniu klientów dla Twojej firmy.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">📱</div>
+          <div class="service-icon" aria-hidden="true">📱</div>
           <h3 data-pl="Mobile-first" data-en="Mobile-first">Mobile-first</h3>
           <p data-pl="Ponad 60% ruchu pochodzi z telefonów. Nasze strony wyglądają i działają perfekcyjnie na każdym urządzeniu." data-en="Over 60% of traffic comes from phones. Our sites look and work perfectly on every device.">Ponad 60% ruchu pochodzi z telefonów. Nasze strony wyglądają i działają perfekcyjnie na każdym urządzeniu.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">⚡</div>
+          <div class="service-icon" aria-hidden="true">⚡</div>
           <h3 data-pl="Szybkość działania" data-en="Fast performance">Szybkość działania</h3>
           <p data-pl="Optymalizacja prędkości to standard, nie opcja. Szybka strona = lepszy SEO = więcej klientów." data-en="Speed optimisation is standard, not optional. Faster site = better SEO = more clients.">Optymalizacja prędkości to standard, nie opcja. Szybka strona = lepszy SEO = więcej klientów.</p>
         </div>
@@ -534,17 +297,17 @@
     </div>
   </section>
 
-  <!-- SERVICES TEASER -->
-  <section class="section">
+  <!-- ═══ SERVICES TEASER ═══ -->
+  <section class="section" aria-labelledby="services-heading">
     <div class="container">
       <span class="tag" data-pl="Usługi" data-en="Services">Usługi</span>
       <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:3rem">
-        <h2 data-pl="Co robimy" data-en="What we do">Co robimy</h2>
-        <button class="btn-outline" onclick="navigate('services')" data-pl="Wszystkie usługi →" data-en="All services →">Wszystkie usługi →</button>
+        <h2 id="services-heading" data-pl="Co robimy" data-en="What we do">Co robimy</h2>
+        <a class="btn-outline" href="/uslugi/" data-pl="Wszystkie usługi →" data-en="All services →">Wszystkie usługi →</a>
       </div>
       <div class="grid-3">
         <div class="service-card" style="border-top:3px solid var(--c-accent)">
-          <div class="service-icon">🌐</div>
+          <div class="service-icon" aria-hidden="true">🌐</div>
           <div class="service-card-inner">
             <h3 data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</h3>
             <p data-pl="Elegancka wizytówka dla freelancerów i małych firm." data-en="Elegant showcase for freelancers and small businesses.">Elegancka wizytówka dla freelancerów i małych firm.</p>
@@ -552,7 +315,7 @@
           </div>
         </div>
         <div class="service-card" style="border-top:3px solid var(--c-accent2)">
-          <div class="service-icon">🏢</div>
+          <div class="service-icon" aria-hidden="true">🏢</div>
           <div class="service-card-inner">
             <h3 data-pl="Strona firmowa" data-en="Business website">Strona firmowa</h3>
             <p data-pl="Profesjonalna strona z pełną funkcjonalnością dla Twojej firmy." data-en="Professional multi-page site with full functionality for your business.">Profesjonalna strona z pełną funkcjonalnością dla Twojej firmy.</p>
@@ -560,7 +323,7 @@
           </div>
         </div>
         <div class="service-card" style="border-top:3px solid var(--c-accent)">
-          <div class="service-icon">🛒</div>
+          <div class="service-icon" aria-hidden="true">🛒</div>
           <div class="service-card-inner">
             <h3 data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</h3>
             <p data-pl="Kompletne rozwiązanie sprzedaży online dopasowane do Twojej branży." data-en="Complete online sales solution tailored to your industry.">Kompletne rozwiązanie sprzedaży online dopasowane do Twojej branży.</p>
@@ -571,622 +334,42 @@
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="section section--alt">
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="section section--alt" aria-labelledby="cta-heading">
     <div class="container" style="text-align:center">
-      <h2 style="margin-bottom:1rem" data-pl="Gotowy na nową stronę?" data-en="Ready for a new website?">Gotowy na nową stronę?</h2>
+      <h2 id="cta-heading" style="margin-bottom:1rem" data-pl="Gotowy na nową stronę?" data-en="Ready for a new website?">Gotowy na nową stronę?</h2>
       <p style="margin:0 auto 2rem;color:var(--c-mid)" data-pl="Napisz do nas, a w ciągu 3 dni otrzymasz bezpłatną wycenę i propozycję rozwiązania." data-en="Get in touch and receive a free quote and proposal within 3 business days.">Napisz do nas, a w ciągu 3 dni otrzymasz bezpłatną wycenę i propozycję rozwiązania.</p>
-      <button class="btn-primary" onclick="navigate('contact')" data-pl="Bezpłatna wycena" data-en="Free quote">Bezpłatna wycena</button>
+      <a class="btn-primary" href="/kontakt/" data-pl="Bezpłatna wycena" data-en="Free quote">Bezpłatna wycena</a>
     </div>
   </section>
 
-</div><!-- /page-home -->
+</main>
 
-
-<!-- ═══════════════════════════════════════════════════════════
-     PAGE: ABOUT
-════════════════════════════════════════════════════════════ -->
-<div class="page page-top" id="page-about">
-  <section class="section">
-    <div class="container">
-      <span class="tag" data-pl="O nas" data-en="About us">O nas</span>
-      <div class="about-grid">
-        <div class="about-sticky">
-          <div class="about-photo">
-            <div class="about-photo-inner">
-              <span class="about-photo-letter">S</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h2 style="margin-bottom:1.5rem" data-pl="Studio z pasją do dobrego kodu i pięknego designu" data-en="A studio passionate about good code and beautiful design">Studio z pasją do dobrego kodu i pięknego designu</h2>
-          <p style="color:var(--c-mid);margin-bottom:1.5rem" data-pl="StudioWWW to agencja internetowa skupiona na jednym: na pomaganiu firmom w zdobywaniu klientów przez internet. Wierzymy, że dobra strona to inwestycja, nie koszt – dlatego każdy projekt traktujemy jak własny biznes." data-en="StudioWWW is a web agency focused on one thing: helping businesses get clients online. We believe a good website is an investment, not a cost – so we treat every project like our own business.">StudioWWW to agencja internetowa skupiona na jednym: na pomaganiu firmom w zdobywaniu klientów przez internet. Wierzymy, że dobra strona to inwestycja, nie koszt – dlatego każdy projekt traktujemy jak własny biznes.</p>
-          <p style="color:var(--c-mid);margin-bottom:2.5rem" data-pl="Pracujemy z małymi i średnimi firmami z całej Polski. Od lokalnych rzemieślników po startupy technologiczne – każdemu pomagamy zaprezentować się online tak, żeby to robiło wrażenie." data-en="We work with small and medium-sized businesses across Poland. From local craftspeople to tech startups – we help everyone present themselves online in a way that makes an impression.">Pracujemy z małymi i średnimi firmami z całej Polski. Od lokalnych rzemieślników po startupy technologiczne – każdemu pomagamy zaprezentować się online tak, żeby to robiło wrażenie.</p>
-
-          <h3 style="margin-bottom:1.5rem;font-size:1.2rem" data-pl="Nasze wartości" data-en="Our values">Nasze wartości</h3>
-          <div class="values-list">
-            <div class="value-item">
-              <div class="value-icon">🤝</div>
-              <div class="value-text">
-                <h4 data-pl="Partnerstwo" data-en="Partnership">Partnerstwo</h4>
-                <p data-pl="Jesteśmy Twoim partnerem, nie tylko wykonawcą. Doradzamy, wyjaśniamy i dbamy o Twój sukces." data-en="We're your partner, not just a vendor. We advise, explain and care about your success.">Jesteśmy Twoim partnerem, nie tylko wykonawcą. Doradzamy, wyjaśniamy i dbamy o Twój sukces.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🔍</div>
-              <div class="value-text">
-                <h4 data-pl="Przejrzystość" data-en="Transparency">Przejrzystość</h4>
-                <p data-pl="Jasne wyceny, realistyczne terminy i bieżąca komunikacja. Bez ukrytych opłat." data-en="Clear quotes, realistic timelines and regular communication. No hidden fees.">Jasne wyceny, realistyczne terminy i bieżąca komunikacja. Bez ukrytych opłat.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">📐</div>
-              <div class="value-text">
-                <h4 data-pl="Dbałość o szczegóły" data-en="Attention to detail">Dbałość o szczegóły</h4>
-                <p data-pl="Doskonałość tkwi w szczegółach – każdy piksel, każda linijka kodu ma znaczenie." data-en="Excellence lives in details – every pixel and every line of code matters.">Doskonałość tkwi w szczegółach – każdy piksel, każda linijka kodu ma znaczenie.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🚀</div>
-              <div class="value-text">
-                <h4 data-pl="Orientacja na wyniki" data-en="Results-driven">Orientacja na wyniki</h4>
-                <p data-pl="Mierzymy sukces wynikami Twojego biznesu, nie własną satysfakcją estetyczną." data-en="We measure success by your business results, not our own aesthetic satisfaction.">Mierzymy sukces wynikami Twojego biznesu, nie własną satysfakcją estetyczną.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Process teaser -->
-          <div style="margin-top:3rem;padding:2rem;background:var(--c-surface);border-radius:12px;border:1px solid var(--c-border)">
-            <h3 style="margin-bottom:1.5rem;font-size:1.1rem" data-pl="Jak pracujemy?" data-en="How we work">Jak pracujemy?</h3>
-            <div class="process-list">
-              <div class="process-step" style="padding:1rem 0">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                  <h3 style="font-size:1rem" data-pl="Bezpłatna konsultacja" data-en="Free consultation">Bezpłatna konsultacja</h3>
-                  <p data-pl="Rozmawiamy o Twoich celach i potrzebach." data-en="We talk about your goals and needs.">Rozmawiamy o Twoich celach i potrzebach.</p>
-                </div>
-              </div>
-              <div class="process-step" style="padding:1rem 0">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                  <h3 style="font-size:1rem" data-pl="Projekt i wycena" data-en="Design &amp; quote">Projekt i wycena</h3>
-                  <p data-pl="Przygotowujemy propozycję i szczegółową wycenę." data-en="We prepare a proposal and detailed quote.">Przygotowujemy propozycję i szczegółową wycenę.</p>
-                </div>
-              </div>
-              <div class="process-step" style="padding:1rem 0;border-bottom:none">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                  <h3 style="font-size:1rem" data-pl="Realizacja i wdrożenie" data-en="Build &amp; launch">Realizacja i wdrożenie</h3>
-                  <p data-pl="Budujemy stronę i oddajemy ją w Twoje ręce." data-en="We build the site and hand it over to you.">Budujemy stronę i oddajemy ją w Twoje ręce.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div><!-- /page-about -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     PAGE: SERVICES
-════════════════════════════════════════════════════════════ -->
-<div class="page page-top" id="page-services">
-  <section class="section">
-    <div class="container">
-      <span class="tag" data-pl="Co oferujemy" data-en="What we offer">Co oferujemy</span>
-      <h2 class="services-intro" style="margin-bottom:.75rem" data-pl="Usługi dopasowane do Twojego budżetu" data-en="Services tailored to your budget">Usługi dopasowane do Twojego budżetu</h2>
-      <p class="services-intro" style="color:var(--c-mid);margin-bottom:3rem" data-pl="Wszystkie nasze ceny są orientacyjne – każdy projekt jest inny. Napisz do nas, a przygotujemy wycenę szytą na miarę." data-en="All our prices are indicative – every project is different. Get in touch and we'll prepare a tailored quote.">Wszystkie nasze ceny są orientacyjne – każdy projekt jest inny. Napisz do nas, a przygotujemy wycenę szytą na miarę.</p>
-
-      <!-- Web services -->
-      <h3 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="Projektowanie i tworzenie stron" data-en="Web design &amp; development">Projektowanie i tworzenie stron</h3>
-      <div class="grid-3" style="margin-bottom:3rem">
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">🎨</div>
-            <h3 data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</h3>
-            <p data-pl="Idealna dla freelancerów, artystów, fotografów i specjalistów. Prosta, elegancka i szybka wizytówka online." data-en="Perfect for freelancers, artists, photographers and specialists. Simple, elegant and fast online business card.">Idealna dla freelancerów, artystów, fotografów i specjalistów. Prosta, elegancka i szybka wizytówka online.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Do 5 podstron" data-en="Up to 5 pages">Do 5 podstron</li>
-              <li data-pl="Formularz kontaktowy" data-en="Contact form">Formularz kontaktowy</li>
-              <li data-pl="Responsywność" data-en="Mobile responsive">Responsywność</li>
-              <li data-pl="Optymalizacja SEO" data-en="SEO optimisation">Optymalizacja SEO</li>
-            </ul>
-            <div class="service-price">1 500 – 3 000 PLN</div>
-          </div>
-        </div>
-        <div class="service-card" style="border:2px solid var(--c-accent)">
-          <div style="position:absolute;top:1rem;right:1rem">
-            <span class="tag" style="margin:0;font-size:.6rem" data-pl="Popularny" data-en="Popular">Popularny</span>
-          </div>
-          <div class="service-card-inner">
-            <div class="service-icon">🏢</div>
-            <h3 data-pl="Strona firmowa" data-en="Business website">Strona firmowa</h3>
-            <p data-pl="Dla firm, które potrzebują pełnej prezentacji oferty, zespołu i referencji. Wiarygodność i profesjonalizm." data-en="For businesses that need a complete presentation of their offer, team and references. Credibility and professionalism.">Dla firm, które potrzebują pełnej prezentacji oferty, zespołu i referencji. Wiarygodność i profesjonalizm.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Nieograniczone podstrony" data-en="Unlimited pages">Nieograniczone podstrony</li>
-              <li data-pl="CMS do samodzielnej edycji" data-en="CMS for self-editing">CMS do samodzielnej edycji</li>
-              <li data-pl="Blog / aktualności" data-en="Blog / news">Blog / aktualności</li>
-              <li data-pl="Integracje (mapy, social)" data-en="Integrations (maps, social)">Integracje (mapy, social)</li>
-              <li data-pl="Zaawansowane SEO" data-en="Advanced SEO">Zaawansowane SEO</li>
-            </ul>
-            <div class="service-price">3 000 – 8 000 PLN</div>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">🛒</div>
-            <h3 data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</h3>
-            <p data-pl="Pełnoprawny sklep internetowy z płatnościami, zarządzaniem zamówieniami i integracją z kurierami." data-en="A full-featured online store with payments, order management and courier integrations.">Pełnoprawny sklep internetowy z płatnościami, zarządzaniem zamówieniami i integracją z kurierami.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Nieograniczone produkty" data-en="Unlimited products">Nieograniczone produkty</li>
-              <li data-pl="Płatności online (Przelewy24, PayPal)" data-en="Online payments (Stripe, PayPal)">Płatności online (Przelewy24, PayPal)</li>
-              <li data-pl="Zarządzanie magazynem" data-en="Inventory management">Zarządzanie magazynem</li>
-              <li data-pl="Integracja z kurierami" data-en="Courier integrations">Integracja z kurierami</li>
-            </ul>
-            <div class="service-price">5 000 – 15 000+ PLN</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEO & Maintenance -->
-      <h3 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="SEO i utrzymanie" data-en="SEO &amp; maintenance">SEO i utrzymanie</h3>
-      <div class="grid-3">
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">🔍</div>
-            <h3 data-pl="Audyt SEO" data-en="SEO audit">Audyt SEO</h3>
-            <p data-pl="Szczegółowa analiza Twojej strony z raportem błędów i listą konkretnych działań do podjęcia." data-en="Detailed analysis of your website with an error report and a concrete action list.">Szczegółowa analiza Twojej strony z raportem błędów i listą konkretnych działań do podjęcia.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Analiza techniczna" data-en="Technical analysis">Analiza techniczna</li>
-              <li data-pl="Analiza słów kluczowych" data-en="Keyword analysis">Analiza słów kluczowych</li>
-              <li data-pl="Analiza konkurencji" data-en="Competitor analysis">Analiza konkurencji</li>
-              <li data-pl="Raport z rekomendacjami" data-en="Report with recommendations">Raport z rekomendacjami</li>
-            </ul>
-            <div class="service-price">500 – 1 500 PLN</div>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">📈</div>
-            <h3 data-pl="Miesięczne SEO" data-en="Monthly SEO">Miesięczne SEO</h3>
-            <p data-pl="Stały monitoring i optymalizacja, żeby Twoja strona wspinała się w wynikach Google." data-en="Ongoing monitoring and optimisation to keep your site climbing up Google results.">Stały monitoring i optymalizacja, żeby Twoja strona wspinała się w wynikach Google.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Optymalizacja treści" data-en="Content optimisation">Optymalizacja treści</li>
-              <li data-pl="Link building" data-en="Link building">Link building</li>
-              <li data-pl="Raport miesięczny" data-en="Monthly report">Raport miesięczny</li>
-              <li data-pl="Monitoring pozycji" data-en="Rank tracking">Monitoring pozycji</li>
-            </ul>
-            <div class="service-price">500 – 3 000 PLN / <span data-pl="mies." data-en="mo.">mies.</span></div>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">🛡️</div>
-            <h3 data-pl="Utrzymanie i opieka" data-en="Maintenance &amp; care">Utrzymanie i opieka</h3>
-            <p data-pl="Aktualizacje, kopie bezpieczeństwa, monitoring i szybka pomoc techniczna. Twoja strona zawsze sprawna." data-en="Updates, backups, monitoring and fast technical support. Your site always running smoothly.">Aktualizacje, kopie bezpieczeństwa, monitoring i szybka pomoc techniczna. Twoja strona zawsze sprawna.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Aktualizacje CMS / wtyczek" data-en="CMS / plugin updates">Aktualizacje CMS / wtyczek</li>
-              <li data-pl="Codzienne kopie zapasowe" data-en="Daily backups">Codzienne kopie zapasowe</li>
-              <li data-pl="Monitoring dostępności 24/7" data-en="24/7 uptime monitoring">Monitoring dostępności 24/7</li>
-              <li data-pl="Wsparcie techniczne" data-en="Technical support">Wsparcie techniczne</li>
-            </ul>
-            <div class="service-price">100 – 500 PLN / <span data-pl="mies." data-en="mo.">mies.</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Process -->
-      <div style="margin-top:5rem">
-        <span class="tag" data-pl="Jak pracujemy" data-en="Our process">Jak pracujemy</span>
-        <h2 style="margin-bottom:2.5rem" data-pl="Proces współpracy" data-en="Our collaboration process">Proces współpracy</h2>
-        <div class="process-list">
-          <div class="process-step">
-            <div class="step-num">1</div>
-            <div class="step-content">
-              <h3 data-pl="Konsultacja i brief" data-en="Consultation &amp; brief">Konsultacja i brief</h3>
-              <p data-pl="Bezpłatna rozmowa o Twoich celach, grupie docelowej, budżecie i oczekiwaniach. Poznajemy Twój biznes." data-en="Free conversation about your goals, target audience, budget and expectations. We get to know your business.">Bezpłatna rozmowa o Twoich celach, grupie docelowej, budżecie i oczekiwaniach. Poznajemy Twój biznes.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">2</div>
-            <div class="step-content">
-              <h3 data-pl="Propozycja i wycena" data-en="Proposal &amp; quote">Propozycja i wycena</h3>
-              <p data-pl="W ciągu 3 dni przesyłamy szczegółową wycenę, harmonogram i propozycję technologiczną." data-en="Within 3 days we send a detailed quote, timeline and technology proposal.">W ciągu 3 dni przesyłamy szczegółową wycenę, harmonogram i propozycję technologiczną.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">3</div>
-            <div class="step-content">
-              <h3 data-pl="Design i projekt" data-en="Design &amp; layout">Design i projekt</h3>
-              <p data-pl="Przygotowujemy makiety i propozycje wizualne. Zbieramy Twój feedback i wprowadzamy poprawki." data-en="We prepare wireframes and visual proposals. We collect your feedback and make revisions.">Przygotowujemy makiety i propozycje wizualne. Zbieramy Twój feedback i wprowadzamy poprawki.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">4</div>
-            <div class="step-content">
-              <h3 data-pl="Programowanie" data-en="Development">Programowanie</h3>
-              <p data-pl="Kodujemy stronę zgodnie z zatwierdzonymi projektami. Wdrażamy wszystkie funcjonalności." data-en="We code the site according to approved designs. We implement all functionalities.">Kodujemy stronę zgodnie z zatwierdzonymi projektami. Wdrażamy wszystkie funcjonalności.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">5</div>
-            <div class="step-content">
-              <h3 data-pl="Testowanie i wdrożenie" data-en="Testing &amp; launch">Testowanie i wdrożenie</h3>
-              <p data-pl="Dogłębne testy na różnych urządzeniach, a następnie wdrożenie i przekazanie strony." data-en="In-depth testing across devices, then deployment and handover.">Dogłębne testy na różnych urządzeniach, a następnie wdrożenie i przekazanie strony.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">6</div>
-            <div class="step-content">
-              <h3 data-pl="Szkolenie i opieka" data-en="Training &amp; support">Szkolenie i opieka</h3>
-              <p data-pl="Pokazujemy jak zarządzać stroną i oferujemy dalszą opiekę techniczną." data-en="We show you how to manage the site and offer ongoing technical support.">Pokazujemy jak zarządzać stroną i oferujemy dalszą opiekę techniczną.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-</div><!-- /page-services -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     PAGE: PORTFOLIO
-════════════════════════════════════════════════════════════ -->
-<div class="page page-top" id="page-portfolio">
-  <section class="section">
-    <div class="container">
-      <span class="tag" data-pl="Nasze realizacje" data-en="Our work">Nasze realizacje</span>
-      <h2 style="margin-bottom:.75rem" data-pl="Portfolio" data-en="Portfolio">Portfolio</h2>
-      <p style="color:var(--c-mid);margin-bottom:2.5rem" data-pl="Wybrane projekty zrealizowane dla naszych klientów." data-en="Selected projects completed for our clients.">Wybrane projekty zrealizowane dla naszych klientów.</p>
-
-      <div class="portfolio-filter">
-        <button class="filter-btn active" onclick="filterPortfolio('all', this)" data-pl="Wszystkie" data-en="All">Wszystkie</button>
-        <button class="filter-btn" onclick="filterPortfolio('business', this)" data-pl="Strony firmowe" data-en="Business sites">Strony firmowe</button>
-        <button class="filter-btn" onclick="filterPortfolio('ecommerce', this)" data-pl="E-commerce" data-en="E-commerce">E-commerce</button>
-        <button class="filter-btn" onclick="filterPortfolio('portfolio', this)" data-pl="Portfolio" data-en="Portfolio">Portfolio</button>
-        <button class="filter-btn" onclick="filterPortfolio('seo', this)" data-pl="SEO" data-en="SEO">SEO</button>
-      </div>
-
-      <div class="portfolio-grid" id="portfolio-grid">
-
-        <div class="portfolio-item" data-cat="business">
-          <div class="portfolio-thumb pt-a">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar">
-                <div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero"></div>
-                <div class="port-row">
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                </div>
-                <div class="port-line"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="Kancelaria Prawna Nowak" data-en="Nowak Law Firm">Kancelaria Prawna Nowak</h3>
-            <p data-pl="Strona firmowa dla kancelarii prawnej w Krakowie." data-en="Business website for a law firm in Kraków.">Strona firmowa dla kancelarii prawnej w Krakowie.</p>
-            <span class="tag" data-pl="Strona firmowa" data-en="Business site">Strona firmowa</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="ecommerce">
-          <div class="portfolio-thumb pt-b">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar">
-                <div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero"></div>
-                <div class="port-row">
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                </div>
-                <div class="port-line"></div>
-                <div class="port-line" style="width:40%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="EcoHome Sklep" data-en="EcoHome Store">EcoHome Sklep</h3>
-            <p data-pl="Sklep z ekologicznymi produktami do domu." data-en="Online store for eco-friendly home products.">Sklep z ekologicznymi produktami do domu.</p>
-            <span class="tag">E-commerce</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="portfolio">
-          <div class="portfolio-thumb pt-c">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar">
-                <div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero"></div>
-                <div class="port-row">
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                </div>
-                <div class="port-line"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="Marta Wiśniewska – fotografia" data-en="Marta Wiśniewska – Photography">Marta Wiśniewska – fotografia</h3>
-            <p data-pl="Portfolio dla fotografki z Warszawy." data-en="Portfolio website for a Warsaw-based photographer.">Portfolio dla fotografki z Warszawy.</p>
-            <span class="tag">Portfolio</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="ecommerce">
-          <div class="portfolio-thumb pt-d">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar">
-                <div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero"></div>
-                <div class="port-row">
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                </div>
-                <div class="port-line"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="Piekarnia Złota Bułeczka" data-en="Golden Roll Bakery">Piekarnia Złota Bułeczka</h3>
-            <p data-pl="Sklep online dla lokalnej piekarni rzemieślniczej." data-en="Online shop for a local artisan bakery.">Sklep online dla lokalnej piekarni rzemieślniczej.</p>
-            <span class="tag">E-commerce</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="seo">
-          <div class="portfolio-thumb pt-e">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar">
-                <div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero" style="background:#2D5A6A"></div>
-                <div class="port-row">
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                  <div class="port-col"></div>
-                </div>
-                <div class="port-line"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="Gabinet Dietetyczny Forma" data-en="Forma Dietetic Practice">Gabinet Dietetyczny Forma</h3>
-            <p data-pl="Audyt i 6-miesięczna kampania SEO z +180% ruchu organicznego." data-en="SEO audit and 6-month campaign with +180% organic traffic increase.">Audyt i 6-miesięczna kampania SEO z +180% ruchu organicznego.</p>
-            <span class="tag">SEO</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="business">
-          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#f0ece3,#e5dfd5)">
-            <div class="portfolio-thumb-inner">
-              <div class="port-bar" style="background:#d5cfc5">
-                <div class="port-dot" style="background:#e57373"></div>
-                <div class="port-dot" style="background:#ffb74d"></div>
-                <div class="port-dot" style="background:#81c784"></div>
-              </div>
-              <div class="port-body">
-                <div class="port-hero" style="background:#8B6914"></div>
-                <div class="port-row">
-                  <div class="port-col" style="background:#C8A96B"></div>
-                  <div class="port-col" style="background:#C8A96B"></div>
-                </div>
-                <div class="port-line" style="background:#d5cfc5"></div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-meta">
-            <h3 data-pl="Architektura Wnętrz Studio B" data-en="Studio B Interior Architecture">Architektura Wnętrz Studio B</h3>
-            <p data-pl="Luksusowa strona dla studia architektury wnętrz." data-en="Luxury website for an interior architecture studio.">Luksusowa strona dla studia architektury wnętrz.</p>
-            <span class="tag" data-pl="Strona firmowa" data-en="Business site">Strona firmowa</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section section--alt">
-    <div class="container">
-      <span class="tag" data-pl="Opinie klientów" data-en="Client reviews">Opinie klientów</span>
-      <h2 style="margin-bottom:2.5rem" data-pl="Co mówią nasi klienci" data-en="What our clients say">Co mówią nasi klienci</h2>
-      <div class="grid-3">
-        <div class="service-card">
-          <div style="font-size:1.2rem;color:var(--c-accent2);margin-bottom:1rem">★★★★★</div>
-          <p style="font-size:.95rem;font-style:italic;color:var(--c-mid);margin-bottom:1.5rem" data-pl="„Praca z StudioWWW to czysta przyjemność. Strona gotowa w terminie, efekt przerósł oczekiwania."" data-en="&ldquo;Working with StudioWWW was a pleasure. Site delivered on time, the result exceeded expectations.&rdquo;">"Praca z StudioWWW to czysta przyjemność. Strona gotowa w terminie, efekt przerósł oczekiwania."</p>
-          <div style="font-size:.85rem;font-weight:500">Anna K.</div>
-          <div class="label">Piekarnia Złota Bułeczka</div>
-        </div>
-        <div class="service-card">
-          <div style="font-size:1.2rem;color:var(--c-accent2);margin-bottom:1rem">★★★★★</div>
-          <p style="font-size:.95rem;font-style:italic;color:var(--c-mid);margin-bottom:1.5rem" data-pl="„Ruch organiczny wzrósł o 180% w ciągu pół roku. Polecam każdemu kto poważnie myśli o SEO."" data-en="&ldquo;Organic traffic grew 180% in six months. I recommend them to anyone serious about SEO.&rdquo;">"Ruch organiczny wzrósł o 180% w ciągu pół roku. Polecam każdemu kto poważnie myśli o SEO."</p>
-          <div style="font-size:.85rem;font-weight:500">Tomasz M.</div>
-          <div class="label">Gabinet Dietetyczny Forma</div>
-        </div>
-        <div class="service-card">
-          <div style="font-size:1.2rem;color:var(--c-accent2);margin-bottom:1rem">★★★★★</div>
-          <p style="font-size:.95rem;font-style:italic;color:var(--c-mid);margin-bottom:1.5rem" data-pl="„Fachowość, terminowość i świetna komunikacja. Strona działa perfekcyjnie od samego początku."" data-en="&ldquo;Professional, punctual and great communication. The site has worked perfectly from day one.&rdquo;">"Fachowość, terminowość i świetna komunikacja. Strona działa perfekcyjnie od samego początku."</p>
-          <div style="font-size:.85rem;font-weight:500">Magdalena N.</div>
-          <div class="label">Kancelaria Prawna Nowak</div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div><!-- /page-portfolio -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     PAGE: CONTACT
-════════════════════════════════════════════════════════════ -->
-<div class="page page-top" id="page-contact">
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="tag" data-pl="Porozmawiajmy" data-en="Let's talk">Porozmawiajmy</span>
-          <h2 data-pl="Napisz do nas" data-en="Get in touch">Napisz do nas</h2>
-          <p data-pl="Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 1 dnia roboczego. Każda konsultacja jest bezpłatna." data-en="Fill in the form and we'll get back to you within 1 business day. Every consultation is free.">Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 1 dnia roboczego. Każda konsultacja jest bezpłatna.</p>
-          <div class="contact-details">
-            <div class="contact-detail">
-              <div class="contact-icon">✉️</div>
-              <div class="contact-detail-text">
-                <small data-pl="E-mail" data-en="Email">E-mail</small>
-                <span>hello@studiowww.pl</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-icon">📞</div>
-              <div class="contact-detail-text">
-                <small data-pl="Telefon" data-en="Phone">Telefon</small>
-                <span>+48 500 123 456</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-icon">📍</div>
-              <div class="contact-detail-text">
-                <small data-pl="Lokalizacja" data-en="Location">Lokalizacja</small>
-                <span>Warszawa, Polska</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-icon">🕐</div>
-              <div class="contact-detail-text">
-                <small data-pl="Godziny pracy" data-en="Working hours">Godziny pracy</small>
-                <span data-pl="Pon–Pt, 9:00–17:00" data-en="Mon–Fri, 9:00–17:00">Pon–Pt, 9:00–17:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-card">
-          <div id="form-fields">
-            <div class="form-row">
-              <div class="form-group">
-                <label data-pl="Imię i nazwisko" data-en="Full name">Imię i nazwisko</label>
-                <input type="text" id="f-name" placeholder="Jan Kowalski" autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label data-pl="E-mail" data-en="Email">E-mail</label>
-                <input type="email" id="f-email" placeholder="jan@firma.pl" autocomplete="email" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label data-pl="Firma (opcjonalnie)" data-en="Company (optional)">Firma (opcjonalnie)</label>
-              <input type="text" id="f-company" placeholder="Nazwa firmy" />
-            </div>
-            <div class="form-group">
-              <label data-pl="Interesuje mnie" data-en="I'm interested in">Interesuje mnie</label>
-              <select id="f-service">
-                <option value="" data-pl="Wybierz usługę..." data-en="Choose a service...">Wybierz usługę...</option>
-                <option value="portfolio" data-pl="Strona portfolio (1500–3000 PLN)" data-en="Portfolio website (1500–3000 PLN)">Strona portfolio (1500–3000 PLN)</option>
-                <option value="business" data-pl="Strona firmowa (3000–8000 PLN)" data-en="Business website (3000–8000 PLN)">Strona firmowa (3000–8000 PLN)</option>
-                <option value="ecommerce" data-pl="Sklep e-commerce (5000–15000+ PLN)" data-en="E-commerce store (5000–15000+ PLN)">Sklep e-commerce (5000–15000+ PLN)</option>
-                <option value="seo-audit" data-pl="Audyt SEO (500–1500 PLN)" data-en="SEO audit (500–1500 PLN)">Audyt SEO (500–1500 PLN)</option>
-                <option value="seo-monthly" data-pl="Miesięczne SEO (500–3000 PLN/mies.)" data-en="Monthly SEO (500–3000 PLN/mo.)">Miesięczne SEO (500–3000 PLN/mies.)</option>
-                <option value="maintenance" data-pl="Utrzymanie (100–500 PLN/mies.)" data-en="Maintenance (100–500 PLN/mo.)">Utrzymanie (100–500 PLN/mies.)</option>
-                <option value="other" data-pl="Inne / nie wiem jeszcze" data-en="Other / not sure yet">Inne / nie wiem jeszcze</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label data-pl="Wiadomość" data-en="Message">Wiadomość</label>
-              <textarea id="f-message" placeholder="" data-pl-placeholder="Opisz krótko swój projekt lub pytanie..." data-en-placeholder="Briefly describe your project or question...">
-              </textarea>
-            </div>
-            <button class="btn-submit" onclick="submitForm()" data-pl="Wyślij wiadomość →" data-en="Send message →">Wyślij wiadomość →</button>
-            <p id="form-error" style="display:none;color:#c0392b;font-size:.82rem;margin-top:.75rem"></p>
-          </div>
-          <div class="form-success" id="form-success">
-            <div class="success-icon">✅</div>
-            <h3 data-pl="Wiadomość wysłana!" data-en="Message sent!">Wiadomość wysłana!</h3>
-            <p data-pl="Dziękujemy za kontakt. Odpiszemy w ciągu jednego dnia roboczego." data-en="Thank you for reaching out. We'll reply within one business day.">Dziękujemy za kontakt. Odpiszemy w ciągu jednego dnia roboczego.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section--alt">
-    <div class="container">
-      <span class="tag">FAQ</span>
-      <h2 style="margin-bottom:2.5rem" data-pl="Często zadawane pytania" data-en="Frequently asked questions">Często zadawane pytania</h2>
-      <div style="max-width:720px;display:flex;flex-direction:column;gap:0">
-        <div class="process-step">
-          <div class="step-num" style="font-size:.85rem;width:auto;height:auto;border:none;color:var(--c-accent);font-family:inherit;font-weight:500">Q</div>
-          <div class="step-content">
-            <h3 style="font-size:1rem" data-pl="Ile trwa realizacja strony?" data-en="How long does it take to build a website?">Ile trwa realizacja strony?</h3>
-            <p data-pl="Strona portfolio: 1–2 tygodnie. Strona firmowa: 3–6 tygodni. Sklep e-commerce: 6–12 tygodni. Czas zależy od złożoności i szybkości dostarczenia materiałów." data-en="Portfolio site: 1–2 weeks. Business site: 3–6 weeks. E-commerce: 6–12 weeks. Time depends on complexity and how quickly materials are provided.">Strona portfolio: 1–2 tygodnie. Strona firmowa: 3–6 tygodni. Sklep e-commerce: 6–12 tygodni. Czas zależy od złożoności i szybkości dostarczenia materiałów.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num" style="font-size:.85rem;width:auto;height:auto;border:none;color:var(--c-accent);font-family:inherit;font-weight:500">Q</div>
-          <div class="step-content">
-            <h3 style="font-size:1rem" data-pl="Czy będę mógł samodzielnie edytować stronę?" data-en="Will I be able to edit the site myself?">Czy będę mógł samodzielnie edytować stronę?</h3>
-            <p data-pl="Tak, każda strona firmowa i e-commerce jest wyposażona w system CMS. Przeprowadzamy też krótkie szkolenie po wdrożeniu." data-en="Yes, every business and e-commerce site comes with a CMS. We also run a short training session after launch.">Tak, każda strona firmowa i e-commerce jest wyposażona w system CMS. Przeprowadzamy też krótkie szkolenie po wdrożeniu.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num" style="font-size:.85rem;width:auto;height:auto;border:none;color:var(--c-accent);font-family:inherit;font-weight:500">Q</div>
-          <div class="step-content">
-            <h3 style="font-size:1rem" data-pl="Czy wymagacie całej płatności z góry?" data-en="Do you require full payment upfront?">Czy wymagacie całej płatności z góry?</h3>
-            <p data-pl="Nie. Standardowo: 40% na start, 60% przed wdrożeniem. Możliwe też etapowe rozliczenia dla większych projektów." data-en="No. Typically: 40% on start, 60% before launch. Staged payments are also possible for larger projects.">Nie. Standardowo: 40% na start, 60% przed wdrożeniem. Możliwe też etapowe rozliczenia dla większych projektów.</p>
-          </div>
-        </div>
-        <div class="process-step" style="border-bottom:none">
-          <div class="step-num" style="font-size:.85rem;width:auto;height:auto;border:none;color:var(--c-accent);font-family:inherit;font-weight:500">Q</div>
-          <div class="step-content">
-            <h3 style="font-size:1rem" data-pl="Czy oferujecie hosting?" data-en="Do you offer hosting?">Czy oferujecie hosting?</h3>
-            <p data-pl="Pomagamy dobrać i skonfigurować hosting, ale nie sprzedajemy go bezpośrednio – dzięki temu masz pełną kontrolę nad swoją stroną i nie jesteś do nas przywiązany." data-en="We help select and configure hosting, but don't sell it directly – that way you have full control over your site and aren't tied to us.">Pomagamy dobrać i skonfigurować hosting, ale nie sprzedajemy go bezpośrednio – dzięki temu masz pełną kontrolę nad swoją stroną i nie jesteś do nas przywiązany.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div><!-- /page-contact -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     FOOTER (always visible)
-════════════════════════════════════════════════════════════ -->
-<footer>
+<!-- ═══ FOOTER ═══ -->
+<footer aria-label="Stopka">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo"><span class="logo-dot"></span>StudioWWW</div>
+        <div class="logo"><span class="logo-dot" aria-hidden="true"></span>StudioWWW</div>
         <p data-pl="Profesjonalne strony internetowe, sklepy e-commerce i SEO dla firm, które chcą rosnąć." data-en="Professional websites, e-commerce stores and SEO for businesses that want to grow.">Profesjonalne strony internetowe, sklepy e-commerce i SEO dla firm, które chcą rosnąć.</p>
       </div>
       <div class="footer-col">
         <h4 data-pl="Usługi" data-en="Services">Usługi</h4>
         <ul>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</a></li>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Strona firmowa" data-en="Business website">Strona firmowa</a></li>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</a></li>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Audyt SEO" data-en="SEO audit">Audyt SEO</a></li>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Miesięczne SEO" data-en="Monthly SEO">Miesięczne SEO</a></li>
-          <li><a href="#" onclick="navigate('services');return false;" data-pl="Utrzymanie" data-en="Maintenance">Utrzymanie</a></li>
+          <li><a href="/uslugi/" data-pl="Strona portfolio"  data-en="Portfolio website">Strona portfolio</a></li>
+          <li><a href="/uslugi/" data-pl="Strona firmowa"    data-en="Business website">Strona firmowa</a></li>
+          <li><a href="/uslugi/" data-pl="Sklep e-commerce"  data-en="E-commerce store">Sklep e-commerce</a></li>
+          <li><a href="/uslugi/" data-pl="Audyt SEO"         data-en="SEO audit">Audyt SEO</a></li>
+          <li><a href="/uslugi/" data-pl="Miesięczne SEO"    data-en="Monthly SEO">Miesięczne SEO</a></li>
+          <li><a href="/uslugi/" data-pl="Utrzymanie"        data-en="Maintenance">Utrzymanie</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4 data-pl="Studio" data-en="Studio">Studio</h4>
         <ul>
-          <li><a href="#" onclick="navigate('about');return false;" data-pl="O nas" data-en="About us">O nas</a></li>
-          <li><a href="#" onclick="navigate('portfolio');return false;" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
-          <li><a href="#" onclick="navigate('contact');return false;" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+          <li><a href="/o-nas/"     data-pl="O nas"      data-en="About us">O nas</a></li>
+          <li><a href="/portfolio/" data-pl="Portfolio"  data-en="Portfolio">Portfolio</a></li>
+          <li><a href="/kontakt/"   data-pl="Kontakt"    data-en="Contact">Kontakt</a></li>
           <li><a href="mailto:hello@studiowww.pl">hello@studiowww.pl</a></li>
           <li><a href="tel:+48500123456">+48 500 123 456</a></li>
         </ul>
@@ -1199,114 +382,35 @@
   </div>
 </footer>
 
-
-<!-- ═══════════════════════════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════════════════════════ -->
 <script>
-  // ─── STATE ───────────────────────────────────────────────
   let currentLang = 'pl';
-  let currentPage = 'home';
   let menuOpen = false;
 
-  // ─── NAVIGATION ──────────────────────────────────────────
-  function navigate(page) {
-    // hide all
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    // show target
-    document.getElementById('page-' + page).classList.add('active');
-    // update nav links
-    document.querySelectorAll('[data-nav]').forEach(a => {
-      a.classList.toggle('active', a.dataset.nav === page);
-    });
-    currentPage = page;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ─── LANGUAGE ────────────────────────────────────────────
   function setLang(lang) {
     currentLang = lang;
-    // toggle button states (desktop + mobile)
-    ['pl', 'en'].forEach(l => {
-      document.getElementById('btn-' + l)?.classList.toggle('active', l === lang);
-      document.getElementById('btn-' + l + '-m')?.classList.toggle('active', l === lang);
+    ['pl','en'].forEach(l => {
+      document.getElementById('btn-'+l)?.classList.toggle('active', l===lang);
+      document.getElementById('btn-'+l+'-m')?.classList.toggle('active', l===lang);
     });
-    // update all translatable text
-    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-      const val = el.getAttribute('data-' + lang);
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = val;
-      } else {
-        el.innerHTML = val;
-      }
+    document.querySelectorAll('[data-'+lang+']').forEach(el => {
+      const val = el.getAttribute('data-'+lang);
+      if (el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder = val;
+      else el.innerHTML = val;
     });
-    // update textarea placeholder manually (data attribute on different elements)
-    document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
-      el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
-    });
-    // update html lang
     document.documentElement.lang = lang;
   }
 
-  // ─── HAMBURGER MENU ──────────────────────────────────────
   function toggleMenu() {
     menuOpen = !menuOpen;
-    document.getElementById('hamburger').classList.toggle('open', menuOpen);
-    document.getElementById('mobile-menu').classList.toggle('open', menuOpen);
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.classList.toggle('open', menuOpen);
+    btn.setAttribute('aria-expanded', menuOpen);
+    menu.classList.toggle('open', menuOpen);
     document.body.style.overflow = menuOpen ? 'hidden' : '';
   }
-  function closeMenu() {
-    menuOpen = false;
-    document.getElementById('hamburger').classList.remove('open');
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.body.style.overflow = '';
-  }
 
-  // ─── PORTFOLIO FILTER ─────────────────────────────────────
-  function filterPortfolio(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-      const show = cat === 'all' || item.dataset.cat === cat;
-      item.style.display = show ? '' : 'none';
-    });
-  }
-
-  // ─── CONTACT FORM ─────────────────────────────────────────
-  function submitForm() {
-    const name    = document.getElementById('f-name').value.trim();
-    const email   = document.getElementById('f-email').value.trim();
-    const service = document.getElementById('f-service').value;
-    const message = document.getElementById('f-message').value.trim();
-    const errEl   = document.getElementById('form-error');
-    errEl.style.display = 'none';
-
-    // validation
-    const errors = {
-      pl: { name:'Wpisz imię i nazwisko.', email:'Wpisz poprawny adres e-mail.', service:'Wybierz usługę.', message:'Wpisz wiadomość.' },
-      en: { name:'Please enter your name.', email:'Please enter a valid email.', service:'Please select a service.', message:'Please enter a message.' }
-    };
-    const t = errors[currentLang];
-    if (!name)                          { showErr(t.name); return; }
-    if (!email || !email.includes('@')) { showErr(t.email); return; }
-    if (!service)                       { showErr(t.service); return; }
-    if (!message)                       { showErr(t.message); return; }
-
-    // simulate send
-    document.getElementById('form-fields').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-    // apply lang to success block
-    setLang(currentLang);
-  }
-  function showErr(msg) {
-    const el = document.getElementById('form-error');
-    el.textContent = msg;
-    el.style.display = 'block';
-  }
-
-  // ─── INIT ─────────────────────────────────────────────────
   setLang('pl');
 </script>
-
 </body>
 </html>

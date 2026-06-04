@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO – O nas ═══ -->
+  <title>O nas – StudioWWW | Agencja Internetowa Warszawa</title>
+  <meta name="description" content="Poznaj StudioWWW – agencję internetową z Warszawy. Tworzymy strony z pasją do kodu i designu. Ponad 40 zrealizowanych projektów, ocena 5★. Dowiedz się, jak pracujemy." />
+  <link rel="canonical" href="https://studiowww.pl/o-nas/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://studiowww.pl/o-nas/" />
+  <meta property="og:title"       content="O nas – StudioWWW | Agencja Internetowa Warszawa" />
+  <meta property="og:description" content="Studio z pasją do dobrego kodu i pięknego designu. Pomagamy firmom zdobywać klientów przez internet." />
+  <meta property="og:locale"      content="pl_PL" />
+  <meta property="og:site_name"   content="StudioWWW" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="O nas – StudioWWW" />
+  <meta name="twitter:description" content="Studio z pasją do dobrego kodu i pięknego designu." />
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://studiowww.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "O nas",         "item": "https://studiowww.pl/o-nas/" }
+    ]
+  }
+  </script>
+
+  <!-- AboutPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "O nas – StudioWWW",
+    "url": "https://studiowww.pl/o-nas/",
+    "description": "StudioWWW to agencja internetowa skupiona na pomaganiu firmom w zdobywaniu klientów przez internet.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "StudioWWW",
+      "url": "https://studiowww.pl"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root { --c-bg:#F5F3EF; --c-surface:#EDEAE3; --c-border:#D8D3C8; --c-ink:#1A1916; --c-mid:#6B6760; --c-accent:#2D5A3D; --c-accent2:#C8A96B; --c-white:#FDFCFA; --r:6px; --gap:clamp(1.5rem,4vw,3rem); --max:1160px; --nav-h:64px; font-size:16px; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--c-bg); color:var(--c-ink); line-height:1.65; font-weight:300; -webkit-font-smoothing:antialiased; }
+    img { display:block; max-width:100%; }
+    a { color:inherit; text-decoration:none; }
+    button { cursor:pointer; font-family:inherit; }
+    h1,h2,h3 { font-family:'DM Serif Display',serif; font-weight:400; line-height:1.15; }
+    h1 { font-size:clamp(2.4rem,6vw,4.5rem); }
+    h2 { font-size:clamp(1.8rem,4vw,3rem); }
+    h3 { font-size:clamp(1.2rem,2.5vw,1.6rem); }
+    p  { max-width:62ch; }
+    .container { width:min(var(--max),100% - 2 * var(--gap)); margin-inline:auto; }
+    .section { padding:clamp(4rem,10vw,8rem) 0; }
+    .section--alt { background:var(--c-surface); }
+    .tag { display:inline-block; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--c-accent); border:1px solid var(--c-accent); border-radius:2rem; padding:.25rem .75rem; margin-bottom:1rem; }
+    .page-top { padding-top:var(--nav-h); }
+
+    /* NAV */
+    nav { position:fixed; inset:0 0 auto 0; height:var(--nav-h); z-index:100; display:flex; align-items:center; background:rgba(245,243,239,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--c-border); }
+    .nav-inner { width:min(var(--max),100% - 2 * var(--gap)); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .logo { font-family:'DM Serif Display',serif; font-size:1.3rem; letter-spacing:-.01em; color:var(--c-ink); display:flex; align-items:center; gap:.4rem; }
+    .logo-dot { width:8px; height:8px; border-radius:50%; background:var(--c-accent); flex-shrink:0; }
+    .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav-links a { font-size:.875rem; letter-spacing:.03em; color:var(--c-mid); transition:color .2s; position:relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:1px; background:var(--c-accent); transform:scaleX(0); transform-origin:left; transition:transform .2s; }
+    .nav-links a:hover { color:var(--c-ink); }
+    .nav-links a:hover::after,.nav-links a.active::after { transform:scaleX(1); }
+    .nav-links a.active { color:var(--c-ink); font-weight:500; }
+    .nav-right { display:flex; align-items:center; gap:1rem; }
+    .lang-btn { font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--c-mid); border:1px solid var(--c-border); background:transparent; padding:.3rem .6rem; border-radius:var(--r); transition:all .2s; }
+    .lang-btn:hover,.lang-btn.active { background:var(--c-ink); color:var(--c-white); border-color:var(--c-ink); }
+    .btn-nav { font-size:.8rem; font-weight:500; letter-spacing:.06em; background:var(--c-accent); color:var(--c-white); border:none; border-radius:var(--r); padding:.5rem 1.2rem; transition:background .2s,transform .15s; display:inline-block; }
+    .btn-nav:hover { background:#234a31; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; padding:4px; }
+    .hamburger span { display:block; width:22px; height:1.5px; background:var(--c-ink); transition:transform .3s,opacity .3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu { position:fixed; inset:var(--nav-h) 0 0 0; background:var(--c-white); z-index:99; display:flex; flex-direction:column; padding:2rem var(--gap); gap:1rem; transform:translateX(100%); transition:transform .3s; }
+    .mobile-menu.open { transform:translateX(0); }
+    .mobile-menu a { font-size:1.2rem; padding:.75rem 0; border-bottom:1px solid var(--c-border); color:var(--c-ink); }
+    .mobile-lang { display:flex; gap:.5rem; margin-top:auto; }
+
+    /* ABOUT */
+    .about-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:calc(var(--gap) * 2); align-items:start; }
+    .about-sticky { position:sticky; top:calc(var(--nav-h) + 2rem); }
+    .about-photo { width:100%; aspect-ratio:3/4; border-radius:12px; background:linear-gradient(135deg,var(--c-surface) 0%,var(--c-border) 100%); position:relative; overflow:hidden; border:1px solid var(--c-border); display:flex; align-items:center; justify-content:center; }
+    .about-photo-letter { font-family:'DM Serif Display',serif; font-size:6rem; color:var(--c-border); line-height:1; display:block; text-align:center; }
+    .values-list { display:flex; flex-direction:column; gap:1.5rem; margin-top:2rem; }
+    .value-item { display:flex; gap:1rem; align-items:flex-start; }
+    .value-icon { width:36px; height:36px; border-radius:8px; background:var(--c-surface); border:1px solid var(--c-border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem; }
+    .value-text h4 { font-family:'DM Serif Display',serif; font-size:1rem; margin-bottom:.2rem; }
+    .value-text p { font-size:.875rem; color:var(--c-mid); max-width:none; }
+    .process-list { display:flex; flex-direction:column; gap:0; }
+    .process-step { display:grid; grid-template-columns:64px 1fr; gap:2rem; padding:2rem 0; border-bottom:1px solid var(--c-border); align-items:start; }
+    .process-step:last-child { border-bottom:none; }
+    .step-num { width:48px; height:48px; border-radius:50%; border:1px solid var(--c-border); display:flex; align-items:center; justify-content:center; font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--c-accent); flex-shrink:0; }
+    .step-content h3 { font-size:1.15rem; margin-bottom:.4rem; }
+    .step-content p { font-size:.9rem; color:var(--c-mid); }
+    .btn-primary { font-size:.875rem; font-weight:500; letter-spacing:.05em; background:var(--c-accent); color:var(--c-white); border:none; border-radius:var(--r); padding:.85rem 2rem; transition:background .2s,transform .15s; display:inline-block; }
+    .btn-primary:hover { background:#234a31; transform:translateY(-2px); }
+
+    /* FOOTER */
+    footer { background:var(--c-ink); color:var(--c-white); padding:3rem 0 2rem; }
+    .footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr; gap:var(--gap); padding-bottom:2rem; border-bottom:1px solid rgba(255,255,255,.1); margin-bottom:1.5rem; }
+    .footer-brand .logo { color:var(--c-white); margin-bottom:1rem; }
+    .footer-brand p { font-size:.875rem; color:rgba(255,255,255,.5); max-width:32ch; }
+    .footer-col h4 { font-family:'DM Serif Display',serif; font-size:1rem; margin-bottom:1rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.5rem; }
+    .footer-col ul a { font-size:.875rem; color:rgba(255,255,255,.5); transition:color .2s; }
+    .footer-col ul a:hover { color:var(--c-white); }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:.8rem; color:rgba(255,255,255,.4); }
+
+    @media (max-width:768px) {
+      .nav-links,.btn-nav { display:none; }
+      .hamburger { display:flex; }
+      .about-grid { grid-template-columns:1fr; }
+      .about-sticky { position:static; }
+      .about-photo { aspect-ratio:4/3; }
+      .footer-inner { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Nawigacja główna">
+  <div class="nav-inner">
+    <a class="logo" href="/" aria-label="StudioWWW – strona główna"><span class="logo-dot" aria-hidden="true"></span>StudioWWW</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/"           data-pl="Start"     data-en="Home">Start</a></li>
+      <li><a href="/o-nas/"     class="active" aria-current="page" data-pl="O nas"     data-en="About">O nas</a></li>
+      <li><a href="/uslugi/"    data-pl="Usługi"    data-en="Services">Usługi</a></li>
+      <li><a href="/portfolio/" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
+      <li><a href="/kontakt/"   data-pl="Kontakt"   data-en="Contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-btn active" id="btn-pl" onclick="setLang('pl')">PL</button>
+      <button class="lang-btn"        id="btn-en" onclick="setLang('en')">EN</button>
+      <a class="btn-nav" href="/kontakt/" data-pl="Wycena" data-en="Get a quote">Wycena</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobilne">
+  <a href="/"           data-pl="Start"     data-en="Home">Start</a>
+  <a href="/o-nas/"     data-pl="O nas"     data-en="About">O nas</a>
+  <a href="/uslugi/"    data-pl="Usługi"    data-en="Services">Usługi</a>
+  <a href="/portfolio/" data-pl="Portfolio" data-en="Portfolio">Portfolio</a>
+  <a href="/kontakt/"   data-pl="Kontakt"   data-en="Contact">Kontakt</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" id="btn-pl-m" onclick="setLang('pl')">PL</button>
+    <button class="lang-btn"        id="btn-en-m" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<main class="page-top">
+
+  <!-- BREADCRUMB (visible, also feeds schema above) -->
+  <nav aria-label="Breadcrumb" style="background:var(--c-surface);border-bottom:1px solid var(--c-border)">
+    <div class="container" style="padding:.75rem 0;font-size:.8rem;color:var(--c-mid)">
+      <ol style="list-style:none;display:flex;gap:.5rem;align-items:center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item" style="color:var(--c-mid)"><span itemprop="name" data-pl="Strona główna" data-en="Home">Strona główna</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li aria-hidden="true">›</li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name" style="color:var(--c-ink)" data-pl="O nas" data-en="About us">O nas</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="section" aria-labelledby="about-heading">
+    <div class="container">
+      <span class="tag" data-pl="O nas" data-en="About us">O nas</span>
+      <div class="about-grid">
+        <div class="about-sticky">
+          <div class="about-photo" aria-hidden="true">
+            <span class="about-photo-letter">S</span>
+          </div>
+        </div>
+        <div>
+          <h1 id="about-heading" style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:1.5rem" data-pl="Studio z pasją do dobrego kodu i pięknego designu" data-en="A studio passionate about good code and beautiful design">Studio z pasją do dobrego kodu i pięknego designu</h1>
+          <p style="color:var(--c-mid);margin-bottom:1.5rem" data-pl="StudioWWW to agencja internetowa skupiona na jednym: na pomaganiu firmom w zdobywaniu klientów przez internet. Wierzymy, że dobra strona to inwestycja, nie koszt – dlatego każdy projekt traktujemy jak własny biznes." data-en="StudioWWW is a web agency focused on one thing: helping businesses get clients online. We believe a good website is an investment, not a cost – so we treat every project like our own business.">StudioWWW to agencja internetowa skupiona na jednym: na pomaganiu firmom w zdobywaniu klientów przez internet. Wierzymy, że dobra strona to inwestycja, nie koszt – dlatego każdy projekt traktujemy jak własny biznes.</p>
+          <p style="color:var(--c-mid);margin-bottom:2.5rem" data-pl="Pracujemy z małymi i średnimi firmami z całej Polski. Od lokalnych rzemieślników po startupy technologiczne – każdemu pomagamy zaprezentować się online tak, żeby to robiło wrażenie." data-en="We work with small and medium-sized businesses across Poland. From local craftspeople to tech startups – we help everyone present themselves online in a way that makes an impression.">Pracujemy z małymi i średnimi firmami z całej Polski. Od lokalnych rzemieślników po startupy technologiczne – każdemu pomagamy zaprezentować się online tak, żeby to robiło wrażenie.</p>
+
+          <h2 style="margin-bottom:1.5rem;font-size:1.2rem" data-pl="Nasze wartości" data-en="Our values">Nasze wartości</h2>
+          <div class="values-list">
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">🤝</div>
+              <div class="value-text">
+                <h3 style="font-size:1rem" data-pl="Partnerstwo" data-en="Partnership">Partnerstwo</h3>
+                <p data-pl="Jesteśmy Twoim partnerem, nie tylko wykonawcą. Doradzamy, wyjaśniamy i dbamy o Twój sukces." data-en="We're your partner, not just a vendor. We advise, explain and care about your success.">Jesteśmy Twoim partnerem, nie tylko wykonawcą. Doradzamy, wyjaśniamy i dbamy o Twój sukces.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">🔍</div>
+              <div class="value-text">
+                <h3 style="font-size:1rem" data-pl="Przejrzystość" data-en="Transparency">Przejrzystość</h3>
+                <p data-pl="Jasne wyceny, realistyczne terminy i bieżąca komunikacja. Bez ukrytych opłat." data-en="Clear quotes, realistic timelines and regular communication. No hidden fees.">Jasne wyceny, realistyczne terminy i bieżąca komunikacja. Bez ukrytych opłat.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">📐</div>
+              <div class="value-text">
+                <h3 style="font-size:1rem" data-pl="Dbałość o szczegóły" data-en="Attention to detail">Dbałość o szczegóły</h3>
+                <p data-pl="Doskonałość tkwi w szczegółach – każdy piksel, każda linijka kodu ma znaczenie." data-en="Excellence lives in details – every pixel and every line of code matters.">Doskonałość tkwi w szczegółach – każdy piksel, każda linijka kodu ma znaczenie.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">🚀</div>
+              <div class="value-text">
+                <h3 style="font-size:1rem" data-pl="Orientacja na wyniki" data-en="Results-driven">Orientacja na wyniki</h3>
+                <p data-pl="Mierzymy sukces wynikami Twojego biznesu, nie własną satysfakcją estetyczną." data-en="We measure success by your business results, not our own aesthetic satisfaction.">Mierzymy sukces wynikami Twojego biznesu, nie własną satysfakcją estetyczną.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Process teaser -->
+          <div style="margin-top:3rem;padding:2rem;background:var(--c-surface);border-radius:12px;border:1px solid var(--c-border)">
+            <h2 style="margin-bottom:1.5rem;font-size:1.1rem" data-pl="Jak pracujemy?" data-en="How we work?">Jak pracujemy?</h2>
+            <div class="process-list">
+              <div class="process-step" style="padding:1rem 0">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                  <h3 style="font-size:1rem" data-pl="Bezpłatna konsultacja" data-en="Free consultation">Bezpłatna konsultacja</h3>
+                  <p data-pl="Rozmawiamy o Twoich celach i potrzebach." data-en="We talk about your goals and needs.">Rozmawiamy o Twoich celach i potrzebach.</p>
+                </div>
+              </div>
+              <div class="process-step" style="padding:1rem 0">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                  <h3 style="font-size:1rem" data-pl="Projekt i wycena" data-en="Design &amp; quote">Projekt i wycena</h3>
+                  <p data-pl="Przygotowujemy propozycję i szczegółową wycenę." data-en="We prepare a proposal and detailed quote.">Przygotowujemy propozycję i szczegółową wycenę.</p>
+                </div>
+              </div>
+              <div class="process-step" style="padding:1rem 0;border-bottom:none">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                  <h3 style="font-size:1rem" data-pl="Realizacja i wdrożenie" data-en="Build &amp; launch">Realizacja i wdrożenie</h3>
+                  <p data-pl="Budujemy stronę i oddajemy ją w Twoje ręce." data-en="We build the site and hand it over to you.">Budujemy stronę i oddajemy ją w Twoje ręce.</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:1.5rem">
+              <a class="btn-primary" href="/uslugi/" data-pl="Szczegółowy proces →" data-en="Full process →">Szczegółowy proces →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer aria-label="Stopka">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-dot" aria-hidden="true"></span>StudioWWW</div>
+        <p data-pl="Profesjonalne strony internetowe, sklepy e-commerce i SEO dla firm, które chcą rosnąć." data-en="Professional websites, e-commerce stores and SEO for businesses that want to grow.">Profesjonalne strony internetowe, sklepy e-commerce i SEO dla firm, które chcą rosnąć.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-pl="Usługi" data-en="Services">Usługi</h4>
+        <ul>
+          <li><a href="/uslugi/" data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</a></li>
+          <li><a href="/uslugi/" data-pl="Strona firmowa"   data-en="Business website">Strona firmowa</a></li>
+          <li><a href="/uslugi/" data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</a></li>
+          <li><a href="/uslugi/" data-pl="Audyt SEO"        data-en="SEO audit">Audyt SEO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-pl="Studio" data-en="Studio">Studio</h4>
+        <ul>
+          <li><a href="/o-nas/"     data-pl="O nas"      data-en="About us">O nas</a></li>
+          <li><a href="/portfolio/" data-pl="Portfolio"  data-en="Portfolio">Portfolio</a></li>
+          <li><a href="/kontakt/"   data-pl="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="mailto:hello@studiowww.pl">hello@studiowww.pl</a></li>
+          <li><a href="tel:+48500123456">+48 500 123 456</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 StudioWWW. <span data-pl="Wszelkie prawa zastrzeżone." data-en="All rights reserved.">Wszelkie prawa zastrzeżone.</span></p>
+      <p style="color:rgba(255,255,255,.25);font-size:.7rem">Warsaw, Poland</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let currentLang='pl', menuOpen=false;
+  function setLang(lang){currentLang=lang;['pl','en'].forEach(l=>{document.getElementById('btn-'+l)?.classList.toggle('active',l===lang);document.getElementById('btn-'+l+'-m')?.classList.toggle('active',l===lang)});document.querySelectorAll('[data-'+lang+']').forEach(el=>{const v=el.getAttribute('data-'+lang);if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=v;else el.innerHTML=v});document.documentElement.lang=lang;}
+  function toggleMenu(){menuOpen=!menuOpen;const b=document.getElementById('hamburger'),m=document.getElementById('mobile-menu');b.classList.toggle('open',menuOpen);b.setAttribute('aria-expanded',menuOpen);m.classList.toggle('open',menuOpen);document.body.style.overflow=menuOpen?'hidden':'';}
+  setLang('pl');
+</script>
+</body>
+</html>
