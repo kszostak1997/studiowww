@@ -352,6 +352,18 @@ footer { background: var(--c-ink); color: var(--c-white); padding: 3rem 0 2rem; 
 .fade-up-3 { animation: fadeUp .6s .3s ease both; }
 .fade-up-4 { animation: fadeUp .6s .45s ease both; }
 
+/* ─── SUBSCRIPTION PRICING ───────────────────────────── */
+.price-split { border-top: 1px solid var(--c-border); padding-top: 1rem; margin-top: auto; }
+.price-setup-line { font-size: .8rem; color: var(--c-mid); margin-bottom: .4rem; }
+.price-setup-line strong { font-weight: 500; color: var(--c-ink); }
+.price-monthly-line { font-family: 'DM Serif Display', serif; font-size: 1.55rem; color: var(--c-accent); line-height: 1.1; }
+.price-monthly-line small { font-family: 'DM Sans', sans-serif; font-size: .78rem; font-weight: 300; color: var(--c-mid); }
+.plan-note { font-size: .78rem; color: var(--c-mid); padding: .55rem .7rem; background: var(--c-surface); border-radius: var(--r); margin-bottom: 1rem; }
+.perk-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 10px; padding: 1.5rem; }
+.perk-card .perk-icon { font-size: 1.4rem; margin-bottom: .65rem; }
+.perk-card h4 { font-family: 'DM Serif Display', serif; font-size: 1.05rem; margin-bottom: .3rem; }
+.perk-card p { font-size: .875rem; color: var(--c-mid); max-width: none; }
+
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav-links, .btn-nav { display: none; }

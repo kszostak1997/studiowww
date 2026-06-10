@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usługi – Strony WWW, E-commerce, SEO | StudioWWW Szczecin</title>
-  <meta name="description" content="Strony portfolio od 1500 PLN, strony firmowe od 3000 PLN, sklepy e-commerce od 5000 PLN. Audyt SEO i miesięczna opieka SEO. Bezpłatna wycena w 3 dni." />
+  <title>Usługi – Abonamentowe strony WWW od 29,99 PLN/mies. | StudioWWW</title>
+  <meta name="description" content="Strona w abonamencie: Wizytówka 599 PLN + 29,99 PLN/mies., Strona Firmowa od 1 499 PLN + od 49,99 PLN/mies. Hosting, domena i certyfikat bezpieczeństwa w cenie. SEO jako dodatek." />
   <link rel="canonical" href="https://studiowww.pl/uslugi" />
   <link rel="alternate" hreflang="pl" href="https://studiowww.pl/uslugi" />
   <link rel="alternate" hreflang="en" href="https://studiowww.pl/uslugi" />
   <meta property="og:title" content="Usługi – StudioWWW" />
-  <meta property="og:description" content="Strony portfolio, firmowe, sklepy e-commerce i SEO. Przejrzyste ceny, bezpłatna wycena." />
+  <meta property="og:description" content="Abonamentowe strony internetowe z hostingiem, domeną i certyfikatem bezpieczeństwa w cenie. Wizytówka od 599 PLN + 29,99 PLN/mies. SEO jako oddzielny dodatek." />
   <meta property="og:url" content="https://studiowww.pl/uslugi" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,25 +26,25 @@
         "@type": "ListItem", "position": 1,
         "item": {
           "@type": "Service",
-          "name": "Strona portfolio",
+          "name": "Wizytówka",
           "provider": { "@type": "LocalBusiness", "name": "StudioWWW" },
-          "offers": { "@type": "Offer", "priceCurrency": "PLN", "priceRange": "1500-3000", "availability": "https://schema.org/InStock" }
+          "offers": { "@type": "Offer", "priceCurrency": "PLN", "price": "599", "availability": "https://schema.org/InStock" }
         }
       },
       {
         "@type": "ListItem", "position": 2,
         "item": {
           "@type": "Service",
-          "name": "Strona firmowa",
+          "name": "Strona Firmowa",
           "provider": { "@type": "LocalBusiness", "name": "StudioWWW" },
-          "offers": { "@type": "Offer", "priceCurrency": "PLN", "priceRange": "3000-8000", "availability": "https://schema.org/InStock" }
+          "offers": { "@type": "Offer", "priceCurrency": "PLN", "priceRange": "1499-3999", "availability": "https://schema.org/InStock" }
         }
       },
       {
         "@type": "ListItem", "position": 3,
         "item": {
           "@type": "Service",
-          "name": "Sklep e-commerce",
+          "name": "Sklep / E-commerce",
           "provider": { "@type": "LocalBusiness", "name": "StudioWWW" },
           "offers": { "@type": "Offer", "priceCurrency": "PLN", "priceRange": "5000-15000", "availability": "https://schema.org/InStock" }
         }
@@ -92,149 +92,202 @@
   <section class="section">
     <div class="container">
       <span class="tag" data-pl="Co oferujemy" data-en="What we offer">Co oferujemy</span>
-      <h1 style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:.75rem" data-pl="Usługi dopasowane do Twojego budżetu" data-en="Services tailored to your budget">Usługi dopasowane do Twojego budżetu</h1>
-      <p style="color:var(--c-mid);margin-bottom:3rem;max-width:52ch" data-pl="Wszystkie nasze ceny są orientacyjne – każdy projekt jest inny. Napisz do nas, a przygotujemy wycenę szytą na miarę." data-en="All our prices are indicative – every project is different. Get in touch and we'll prepare a tailored quote.">Wszystkie nasze ceny są orientacyjne – każdy projekt jest inny. Napisz do nas, a przygotujemy wycenę szytą na miarę.</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:.75rem" data-pl="Strony z abonamentem – bez ukrytych kosztów" data-en="Subscription websites – no hidden costs">Strony z abonamentem – bez ukrytych kosztów</h1>
+      <p style="color:var(--c-mid);margin-bottom:3rem;max-width:60ch" data-pl="Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i do 30 minut zmian miesięcznie wliczone w cenę. Zero niespodzianek." data-en="You pay once for the build, then a low monthly subscription. Hosting, domain, security certificate and up to 30 min of changes per month are all included. No surprises.">Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i do 30 minut zmian miesięcznie wliczone w cenę. Zero niespodzianek.</p>
 
-      <h2 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="Projektowanie i tworzenie stron" data-en="Web design &amp; development">Projektowanie i tworzenie stron</h2>
-      <div class="grid-3" style="margin-bottom:3rem">
+      <!-- PRICING TIERS -->
+      <h2 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="Plany abonamentowe" data-en="Subscription plans">Plany abonamentowe</h2>
+      <div class="grid-3" style="margin-bottom:4rem">
+
+        <!-- WIZYTÓWKA -->
         <div class="service-card">
           <div class="service-card-inner">
-            <div class="service-icon">🎨</div>
-            <h3 data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</h3>
-            <p data-pl="Idealna dla freelancerów, artystów, fotografów i specjalistów. Prosta, elegancka i szybka wizytówka online." data-en="Perfect for freelancers, artists, photographers and specialists. Simple, elegant and fast online business card.">Idealna dla freelancerów, artystów, fotografów i specjalistów. Prosta, elegancka i szybka wizytówka online.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Do 5 podstron" data-en="Up to 5 pages">Do 5 podstron</li>
+            <div class="service-icon">🌐</div>
+            <h3 data-pl="Wizytówka" data-en="Business Card Site">Wizytówka</h3>
+            <p style="font-size:.75rem;color:var(--c-mid);margin-bottom:.6rem;font-style:italic" data-pl="freelancerzy, jednoosobowe firmy, lokalni usługodawcy" data-en="freelancers, sole traders, local service businesses">freelancerzy, jednoosobowe firmy, lokalni usługodawcy</p>
+            <p data-pl="Jednostronicowa strona z formularzem kontaktowym. Prosta, szybka i elegancka wizytówka online." data-en="Single-page site with contact form. Clean, fast and elegant online presence.">Jednostronicowa strona z formularzem kontaktowym. Prosta, szybka i elegancka wizytówka online.</p>
+            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
+              <li data-pl="Hosting" data-en="Hosting">Hosting</li>
+              <li data-pl="Domena + certyfikat bezpieczeństwa" data-en="Domain + security certificate">Domena + certyfikat bezpieczeństwa</li>
+              <li data-pl="Do 30 min zmian / mies." data-en="Up to 30 min changes / mo">Do 30 min zmian / mies.</li>
               <li data-pl="Formularz kontaktowy" data-en="Contact form">Formularz kontaktowy</li>
-              <li data-pl="Responsywność" data-en="Mobile responsive">Responsywność</li>
-              <li data-pl="Optymalizacja SEO" data-en="SEO optimisation">Optymalizacja SEO</li>
+              <li data-pl="Responsywność i SEO on-page" data-en="Responsive &amp; on-page SEO">Responsywność i SEO on-page</li>
             </ul>
-            <div class="service-price">1 500 – 3 000 PLN</div>
+            <p class="plan-note" data-pl="Umowa min. 12 mies., potem miesiąc na miesiąc (30 dni wypowiedzenia)" data-en="12-month minimum, then rolling month-to-month (30 days notice)">Umowa min. 12 mies., potem miesiąc na miesiąc (30 dni wypowiedzenia)</p>
+            <div class="price-split">
+              <p class="price-setup-line">
+                <span data-pl="Konfiguracja:" data-en="Setup:">Konfiguracja:</span>
+                <strong> 599 PLN</strong>
+                <span style="font-size:.7rem" data-pl=" jednorazowo" data-en=" one-time"> jednorazowo</span>
+              </p>
+              <div class="price-monthly-line">29,99 PLN<small data-pl=" / mies." data-en=" / mo."> / mies.</small></div>
+            </div>
           </div>
         </div>
+
+        <!-- STRONA FIRMOWA -->
         <div class="service-card" style="border:2px solid var(--c-accent)">
           <div style="position:absolute;top:1rem;right:1rem">
             <span class="tag" style="margin:0;font-size:.6rem" data-pl="Popularny" data-en="Popular">Popularny</span>
           </div>
           <div class="service-card-inner">
             <div class="service-icon">🏢</div>
-            <h3 data-pl="Strona firmowa" data-en="Business website">Strona firmowa</h3>
-            <p data-pl="Dla firm, które potrzebują pełnej prezentacji oferty, zespołu i referencji. Wiarygodność i profesjonalizm." data-en="For businesses that need a complete presentation of their offer, team and references. Credibility and professionalism.">Dla firm, które potrzebują pełnej prezentacji oferty, zespołu i referencji. Wiarygodność i profesjonalizm.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Nieograniczone podstrony" data-en="Unlimited pages">Nieograniczone podstrony</li>
-              <li data-pl="CMS do samodzielnej edycji" data-en="CMS for self-editing">CMS do samodzielnej edycji</li>
-              <li data-pl="Blog / aktualności" data-en="Blog / news">Blog / aktualności</li>
-              <li data-pl="Integracje (mapy, social)" data-en="Integrations (maps, social)">Integracje (mapy, social)</li>
-              <li data-pl="Zaawansowane SEO" data-en="Advanced SEO">Zaawansowane SEO</li>
+            <h3 data-pl="Strona Firmowa" data-en="Business Site">Strona Firmowa</h3>
+            <p style="font-size:.75rem;color:var(--c-mid);margin-bottom:.6rem;font-style:italic" data-pl="MŚP, restauracje, firmy usługowe" data-en="SMEs, restaurants, service businesses">MŚP, restauracje, firmy usługowe</p>
+            <p data-pl="Wielostronicowa statyczna strona z integracjami zewnętrznymi – kalendarze rezerwacji, linki płatności, menu online, zamawianie dla restauracji i inne." data-en="Multi-page static site with external integrations – booking calendars, payment links, online menus, restaurant ordering, and more.">Wielostronicowa statyczna strona z integracjami zewnętrznymi – kalendarze rezerwacji, linki płatności, menu online, zamawianie dla restauracji i inne.</p>
+            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
+              <li data-pl="Hosting, domena + certyfikat bezpieczeństwa" data-en="Hosting, domain + security certificate">Hosting, domena + certyfikat bezpieczeństwa</li>
+              <li data-pl="Do 30 min zmian / mies." data-en="Up to 30 min changes / mo">Do 30 min zmian / mies.</li>
+              <li data-pl="Wiele podstron" data-en="Multiple pages">Wiele podstron</li>
+              <li data-pl="Integracje zewnętrzne wg briefu" data-en="External integrations per brief">Integracje zewnętrzne wg briefu</li>
+              <li data-pl="Responsywność i SEO on-page" data-en="Responsive &amp; on-page SEO">Responsywność i SEO on-page</li>
             </ul>
-            <div class="service-price">3 000 – 8 000 PLN</div>
+            <p class="plan-note" data-pl="Umowa min. 12 mies., potem miesiąc na miesiąc (30 dni wypowiedzenia)" data-en="12-month minimum, then rolling month-to-month (30 days notice)">Umowa min. 12 mies., potem miesiąc na miesiąc (30 dni wypowiedzenia)</p>
+            <div class="price-split">
+              <p class="price-setup-line">
+                <span data-pl="Konfiguracja:" data-en="Setup:">Konfiguracja:</span>
+                <strong> 1 499 – 3 999 PLN</strong>
+                <span style="font-size:.7rem" data-pl=" wg briefu" data-en=" scoped"> wg briefu</span>
+              </p>
+              <div class="price-monthly-line">49,99 – 99,99 PLN<small data-pl=" / mies." data-en=" / mo."> / mies.</small></div>
+            </div>
           </div>
         </div>
+
+        <!-- SKLEP / E-COMMERCE -->
         <div class="service-card">
           <div class="service-card-inner">
             <div class="service-icon">🛒</div>
-            <h3 data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</h3>
-            <p data-pl="Pełnoprawny sklep internetowy z płatnościami, zarządzaniem zamówieniami i integracją z kurierami." data-en="A full-featured online store with payments, order management and courier integrations.">Pełnoprawny sklep internetowy z płatnościami, zarządzaniem zamówieniami i integracją z kurierami.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
+            <h3 data-pl="Sklep / E-commerce" data-en="Shop / E-commerce">Sklep / E-commerce</h3>
+            <p style="font-size:.75rem;color:var(--c-mid);margin-bottom:.6rem;font-style:italic" data-pl="firmy potrzebujące pełnego sklepu online" data-en="businesses needing a full online store">firmy potrzebujące pełnego sklepu online</p>
+            <p data-pl="Duże projekty wyceniane indywidualnie. Pełny sklep internetowy z zarządzaniem produktami, płatnościami i integracją z kurierami." data-en="Large projects quoted individually. Full online store with product management, payments and courier integrations.">Duże projekty wyceniane indywidualnie. Pełny sklep internetowy z zarządzaniem produktami, płatnościami i integracją z kurierami.</p>
+            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
               <li data-pl="Nieograniczone produkty" data-en="Unlimited products">Nieograniczone produkty</li>
-              <li data-pl="Płatności online (Przelewy24, PayPal)" data-en="Online payments (Stripe, PayPal)">Płatności online (Przelewy24, PayPal)</li>
+              <li data-pl="Płatności online (Przelewy24, PayPal)" data-en="Online payments (Przelewy24, PayPal)">Płatności online (Przelewy24, PayPal)</li>
               <li data-pl="Zarządzanie magazynem" data-en="Inventory management">Zarządzanie magazynem</li>
               <li data-pl="Integracja z kurierami" data-en="Courier integrations">Integracja z kurierami</li>
+              <li data-pl="Wycena indywidualna" data-en="Individual quote">Wycena indywidualna</li>
             </ul>
-            <div class="service-price">5 000 – 15 000+ PLN</div>
+            <p class="plan-note" data-pl="Tradycyjna umowa o opiece technicznej (nie abonament)" data-en="Traditional maintenance contract (not subscription-based)">Tradycyjna umowa o opiece technicznej (nie abonament)</p>
+            <div class="price-split">
+              <p class="price-setup-line">
+                <span data-pl="Konfiguracja:" data-en="Setup:">Konfiguracja:</span>
+                <strong> 5 000 – 15 000+ PLN</strong>
+                <span style="font-size:.7rem" data-pl=" wycena indywidualna" data-en=" individual quote"> wycena indywidualna</span>
+              </p>
+              <div class="price-monthly-line">149 – 299 PLN<small data-pl=" / mies. opieka" data-en=" / mo. maintenance"> / mies. opieka</small></div>
+            </div>
           </div>
         </div>
+
       </div>
 
-      <h2 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="SEO i utrzymanie" data-en="SEO &amp; maintenance">SEO i utrzymanie</h2>
-      <div class="grid-3" style="margin-bottom:4rem">
+      <!-- SEO ADD-ONS -->
+      <h2 style="margin-bottom:.75rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="SEO – samodzielny dodatek" data-en="SEO – standalone add-on">SEO – samodzielny dodatek</h2>
+      <p style="color:var(--c-mid);margin-bottom:2rem;max-width:52ch" data-pl="SEO nie jest wliczone w żaden plan – kupujesz go oddzielnie lub dodajesz do istniejącego abonamentu." data-en="SEO is not bundled into any plan – buy it standalone or add it on top of any existing subscription.">SEO nie jest wliczone w żaden plan – kupujesz go oddzielnie lub dodajesz do istniejącego abonamentu.</p>
+      <div class="grid-2" style="margin-bottom:4rem;max-width:720px">
         <div class="service-card">
           <div class="service-card-inner">
             <div class="service-icon">🔍</div>
-            <h3 data-pl="Audyt SEO" data-en="SEO audit">Audyt SEO</h3>
-            <p data-pl="Szczegółowa analiza Twojej strony z raportem błędów i listą konkretnych działań do podjęcia." data-en="Detailed analysis of your website with an error report and a concrete action list.">Szczegółowa analiza Twojej strony z raportem błędów i listą konkretnych działań do podjęcia.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
+            <h3 data-pl="Audyt SEO" data-en="SEO Audit">Audyt SEO</h3>
+            <p data-pl="Szczegółowa analiza strony z raportem błędów i listą konkretnych działań do podjęcia." data-en="Detailed site analysis with an error report and a concrete action list.">Szczegółowa analiza strony z raportem błędów i listą konkretnych działań do podjęcia.</p>
+            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
               <li data-pl="Analiza techniczna" data-en="Technical analysis">Analiza techniczna</li>
               <li data-pl="Analiza słów kluczowych" data-en="Keyword analysis">Analiza słów kluczowych</li>
               <li data-pl="Analiza konkurencji" data-en="Competitor analysis">Analiza konkurencji</li>
               <li data-pl="Raport z rekomendacjami" data-en="Report with recommendations">Raport z rekomendacjami</li>
             </ul>
-            <div class="service-price">500 – 1 500 PLN</div>
+            <div class="service-price">499 – 999 PLN<span style="font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:300;color:var(--c-mid)" data-pl=" jednorazowo" data-en=" one-time"> jednorazowo</span></div>
           </div>
         </div>
         <div class="service-card">
           <div class="service-card-inner">
             <div class="service-icon">📈</div>
             <h3 data-pl="Miesięczne SEO" data-en="Monthly SEO">Miesięczne SEO</h3>
-            <p data-pl="Stały monitoring i optymalizacja, żeby Twoja strona wspinała się w wynikach Google." data-en="Ongoing monitoring and optimisation to keep your site climbing Google results.">Stały monitoring i optymalizacja, żeby Twoja strona wspinała się w wynikach Google.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
+            <p data-pl="Stały monitoring i optymalizacja. Dodawany do istniejącego planu abonamentowego." data-en="Ongoing monitoring and optimisation. Added to any existing subscription plan.">Stały monitoring i optymalizacja. Dodawany do istniejącego planu abonamentowego.</p>
+            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
               <li data-pl="Optymalizacja treści" data-en="Content optimisation">Optymalizacja treści</li>
               <li data-pl="Link building" data-en="Link building">Link building</li>
               <li data-pl="Raport miesięczny" data-en="Monthly report">Raport miesięczny</li>
               <li data-pl="Monitoring pozycji" data-en="Rank tracking">Monitoring pozycji</li>
             </ul>
-            <div class="service-price">500 – 3 000 PLN / <span data-pl="mies." data-en="mo.">mies.</span></div>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-inner">
-            <div class="service-icon">🛡️</div>
-            <h3 data-pl="Utrzymanie i opieka" data-en="Maintenance &amp; care">Utrzymanie i opieka</h3>
-            <p data-pl="Aktualizacje, kopie bezpieczeństwa, monitoring i szybka pomoc techniczna. Twoja strona zawsze sprawna." data-en="Updates, backups, monitoring and fast technical support. Your site always running smoothly.">Aktualizacje, kopie bezpieczeństwa, monitoring i szybka pomoc techniczna. Twoja strona zawsze sprawna.</p>
-            <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:.3rem">
-              <li data-pl="Aktualizacje CMS / wtyczek" data-en="CMS / plugin updates">Aktualizacje CMS / wtyczek</li>
-              <li data-pl="Codzienne kopie zapasowe" data-en="Daily backups">Codzienne kopie zapasowe</li>
-              <li data-pl="Monitoring dostępności 24/7" data-en="24/7 uptime monitoring">Monitoring dostępności 24/7</li>
-              <li data-pl="Wsparcie techniczne" data-en="Technical support">Wsparcie techniczne</li>
-            </ul>
-            <div class="service-price">100 – 500 PLN / <span data-pl="mies." data-en="mo.">mies.</span></div>
+            <div class="service-price">+199 PLN<span style="font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:300;color:var(--c-mid)" data-pl=" / mies. do planu" data-en=" / mo. added to plan"> / mies. do planu</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Process -->
+      <!-- PERKS -->
+      <span class="tag" data-pl="Dodatkowe korzyści" data-en="Additional perks">Dodatkowe korzyści</span>
+      <h2 style="margin-bottom:2rem" data-pl="Więcej w planie" data-en="More in the plan">Więcej w planie</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:var(--gap);margin-bottom:4rem">
+        <div class="perk-card">
+          <div class="perk-icon">🎁</div>
+          <h4 data-pl="Promocja startowa" data-en="Launch promotion">Promocja startowa</h4>
+          <p data-pl="Pierwsze 3 miesiące abonamentu za 50% ceny – oszczędzasz od pierwszego dnia." data-en="First 3 months of subscription at 50% off – savings from day one.">Pierwsze 3 miesiące abonamentu za 50% ceny – oszczędzasz od pierwszego dnia.</p>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon">❄️</div>
+          <h4 data-pl="Opcja Freeze" data-en="Freeze option">Opcja Freeze</h4>
+          <p data-pl="Możesz bezpłatnie dezaktywować stronę na maksymalnie 3 miesiące. Abonament wstrzymany, strona offline – zero opłat w tym czasie." data-en="You can deactivate your site free of charge for up to 3 months. Subscription paused, site offline – no charges during that period.">Możesz bezpłatnie dezaktywować stronę na maksymalnie 3 miesiące. Abonament wstrzymany, strona offline – zero opłat w tym czasie.</p>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon">👥</div>
+          <h4 data-pl="Program poleceń" data-en="Referral programme">Program poleceń</h4>
+          <p data-pl="Za każdego poleconego klienta, który podpisze umowę, otrzymujesz miesiąc abonamentu gratis." data-en="For every referred client who signs a contract, you receive one free month of subscription.">Za każdego poleconego klienta, który podpisze umowę, otrzymujesz miesiąc abonamentu gratis.</p>
+        </div>
+      </div>
+
+      <!-- PROCESS -->
       <span class="tag" data-pl="Jak pracujemy" data-en="Our process">Jak pracujemy</span>
       <h2 style="margin-bottom:2.5rem" data-pl="Proces współpracy" data-en="Our collaboration process">Proces współpracy</h2>
       <div class="process-list">
         <div class="process-step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <h3 data-pl="Konsultacja i brief" data-en="Consultation &amp; brief">Konsultacja i brief</h3>
-            <p data-pl="Bezpłatna rozmowa o Twoich celach, grupie docelowej, budżecie i oczekiwaniach. Poznajemy Twój biznes." data-en="Free conversation about your goals, target audience, budget and expectations. We get to know your business.">Bezpłatna rozmowa o Twoich celach, grupie docelowej, budżecie i oczekiwaniach. Poznajemy Twój biznes.</p>
+            <h3 data-pl="Formularz kontaktowy" data-en="Contact form">Formularz kontaktowy</h3>
+            <p data-pl="Wypełniasz formularz kontaktowy na stronie. Opisujesz potrzebę i zostawiasz dane – to wszystko, co musisz zrobić na start." data-en="You fill in the contact form on the site. Describe your need and leave your details – that's all you need to do to get started.">Wypełniasz formularz kontaktowy na stronie. Opisujesz potrzebę i zostawiasz dane – to wszystko, co musisz zrobić na start.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <h3 data-pl="Propozycja i wycena" data-en="Proposal &amp; quote">Propozycja i wycena</h3>
-            <p data-pl="W ciągu 3 dni przesyłamy szczegółową wycenę, harmonogram i propozycję technologiczną." data-en="Within 3 days we send a detailed quote, timeline and technology proposal.">W ciągu 3 dni przesyłamy szczegółową wycenę, harmonogram i propozycję technologiczną.</p>
+            <h3 data-pl="Brief (do 24h)" data-en="Intake brief (within 24h)">Brief (do 24h)</h3>
+            <p data-pl="W ciągu 24 godzin przesyłamy formularz briefu: typ strony, branża, przykłady inspiracji, potrzebne funkcje, termin i status domeny." data-en="Within 24 hours we send an intake form: site type, industry, inspiration examples, required features, timeline and domain status.">W ciągu 24 godzin przesyłamy formularz briefu: typ strony, branża, przykłady inspiracji, potrzebne funkcje, termin i status domeny.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <h3 data-pl="Design i projekt" data-en="Design &amp; layout">Design i projekt</h3>
-            <p data-pl="Przygotowujemy makiety i propozycje wizualne. Zbieramy Twój feedback i wprowadzamy poprawki." data-en="We prepare wireframes and visual proposals. We collect your feedback and make revisions.">Przygotowujemy makiety i propozycje wizualne. Zbieramy Twój feedback i wprowadzamy poprawki.</p>
+            <h3 data-pl="Propozycja i wycena (do 3 dni)" data-en="Proposal &amp; quote (within 3 days)">Propozycja i wycena (do 3 dni)</h3>
+            <p data-pl="Po otrzymaniu wypełnionego briefu przesyłamy propozycję i wycenę w ciągu 3 dni roboczych." data-en="Once we receive the completed brief we send a proposal and quote within 3 business days.">Po otrzymaniu wypełnionego briefu przesyłamy propozycję i wycenę w ciągu 3 dni roboczych.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">4</div>
           <div class="step-content">
-            <h3 data-pl="Programowanie" data-en="Development">Programowanie</h3>
-            <p data-pl="Kodujemy stronę zgodnie z zatwierdzonymi projektami. Wdrażamy wszystkie funkcjonalności." data-en="We code the site according to approved designs. We implement all functionalities.">Kodujemy stronę zgodnie z zatwierdzonymi projektami. Wdrażamy wszystkie funkcjonalności.</p>
+            <h3 data-pl="Umowa + zaliczka 50%" data-en="Contract + 50% deposit">Umowa + zaliczka 50%</h3>
+            <p data-pl="Podpisujemy umowę i pobieramy 50% zaliczki. Prace startują natychmiast po wpłacie." data-en="We sign the contract and collect a 50% deposit. Work starts immediately after payment.">Podpisujemy umowę i pobieramy 50% zaliczki. Prace startują natychmiast po wpłacie.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">5</div>
           <div class="step-content">
-            <h3 data-pl="Testowanie i wdrożenie" data-en="Testing &amp; launch">Testowanie i wdrożenie</h3>
-            <p data-pl="Dogłębne testy na różnych urządzeniach, a następnie wdrożenie i przekazanie strony." data-en="In-depth testing across devices, then deployment and handover.">Dogłębne testy na różnych urządzeniach, a następnie wdrożenie i przekazanie strony.</p>
+            <h3 data-pl="Projektowanie i realizacja" data-en="Design &amp; development">Projektowanie i realizacja</h3>
+            <p data-pl="Prezentujemy jedną kierunkową propozycję graficzną (nie kilka opcji do wyboru). W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN." data-en="We present one design direction (not multiple options to choose from). Two revision rounds are included. Each additional round costs 150–300 PLN.">Prezentujemy jedną kierunkową propozycję graficzną (nie kilka opcji do wyboru). W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">6</div>
           <div class="step-content">
-            <h3 data-pl="Szkolenie i opieka" data-en="Training &amp; support">Szkolenie i opieka</h3>
-            <p data-pl="Pokazujemy jak zarządzać stroną i oferujemy dalszą opiekę techniczną." data-en="We show you how to manage the site and offer ongoing technical support.">Pokazujemy jak zarządzać stroną i oferujemy dalszą opiekę techniczną.</p>
+            <h3 data-pl="Płatność końcowa i wdrożenie" data-en="Final payment &amp; launch">Płatność końcowa i wdrożenie</h3>
+            <p data-pl="Przed uruchomieniem strony pobieramy pozostałe 50% płatności. Następnie wdrażamy stronę i przekazujemy dostępy." data-en="Before launch we collect the remaining 50% payment. We then deploy the site and hand over access.">Przed uruchomieniem strony pobieramy pozostałe 50% płatności. Następnie wdrażamy stronę i przekazujemy dostępy.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <h3 data-pl="Start abonamentu" data-en="Subscription starts">Start abonamentu</h3>
+            <p data-pl="Abonament miesięczny startuje w dniu uruchomienia strony. Pierwsze 3 miesiące za 50% ceny w ramach promocji startowej." data-en="The monthly subscription starts on the day of launch. First 3 months at 50% off as part of the launch promotion.">Abonament miesięczny startuje w dniu uruchomienia strony. Pierwsze 3 miesiące za 50% ceny w ramach promocji startowej.</p>
           </div>
         </div>
       </div>
@@ -244,7 +297,7 @@
   <section class="section section--alt">
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem" data-pl="Gotowy na nową stronę?" data-en="Ready for a new website?">Gotowy na nową stronę?</h2>
-      <p style="margin:0 auto 2rem;color:var(--c-mid)" data-pl="Napisz do nas, a w ciągu 3 dni otrzymasz bezpłatną wycenę." data-en="Get in touch and receive a free quote within 3 business days.">Napisz do nas, a w ciągu 3 dni otrzymasz bezpłatną wycenę.</p>
+      <p style="margin:0 auto 2rem;color:var(--c-mid)" data-pl="Napisz do nas, a w ciągu 3 dni od przesłania briefu otrzymasz wycenę." data-en="Get in touch and receive a quote within 3 days of submitting your brief.">Napisz do nas, a w ciągu 3 dni od przesłania briefu otrzymasz wycenę.</p>
       <a class="btn-primary" href="/kontakt" data-pl="Bezpłatna wycena" data-en="Free quote">Bezpłatna wycena</a>
     </div>
   </section>
@@ -261,12 +314,11 @@
       <div class="footer-col">
         <h4 data-pl="Usługi" data-en="Services">Usługi</h4>
         <ul>
-          <li><a href="/uslugi" data-pl="Strona portfolio" data-en="Portfolio website">Strona portfolio</a></li>
-          <li><a href="/uslugi" data-pl="Strona firmowa" data-en="Business website">Strona firmowa</a></li>
-          <li><a href="/uslugi" data-pl="Sklep e-commerce" data-en="E-commerce store">Sklep e-commerce</a></li>
+          <li><a href="/uslugi" data-pl="Wizytówka" data-en="Business Card Site">Wizytówka</a></li>
+          <li><a href="/uslugi" data-pl="Strona Firmowa" data-en="Business Site">Strona Firmowa</a></li>
+          <li><a href="/uslugi" data-pl="Sklep / E-commerce" data-en="Shop / E-commerce">Sklep / E-commerce</a></li>
           <li><a href="/uslugi" data-pl="Audyt SEO" data-en="SEO audit">Audyt SEO</a></li>
           <li><a href="/uslugi" data-pl="Miesięczne SEO" data-en="Monthly SEO">Miesięczne SEO</a></li>
-          <li><a href="/uslugi" data-pl="Utrzymanie" data-en="Maintenance">Utrzymanie</a></li>
         </ul>
       </div>
       <div class="footer-col">
