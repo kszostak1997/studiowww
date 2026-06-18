@@ -8,10 +8,19 @@
   <link rel="canonical" href="https://studiowww.pl/uslugi" />
   <link rel="alternate" hreflang="pl" href="https://studiowww.pl/uslugi" />
   <link rel="alternate" hreflang="en" href="https://studiowww.pl/uslugi" />
+  <link rel="alternate" hreflang="x-default" href="https://studiowww.pl/uslugi" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta property="og:title" content="Usługi – StudioWWW" />
   <meta property="og:description" content="Abonamentowe strony internetowe z hostingiem, domeną i certyfikatem bezpieczeństwa w cenie. Wizytówka od 599 PLN + 29,99 PLN/mies. SEO jako oddzielny dodatek." />
   <meta property="og:url" content="https://studiowww.pl/uslugi" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://studiowww.pl/media/headshot.webp" />
+  <meta property="og:image:alt" content="StudioWWW – Abonamentowe strony internetowe" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Usługi – StudioWWW" />
+  <meta name="twitter:description" content="Abonamentowe strony internetowe z hostingiem, domeną i certyfikatem bezpieczeństwa w cenie." />
+  <meta name="twitter:image" content="https://studiowww.pl/media/headshot.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -52,6 +61,16 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Start",  "item": "https://studiowww.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://studiowww.pl/uslugi" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -63,7 +82,6 @@
       <li><a href="/" data-nav-path="/" data-pl="Start" data-en="Home">Start</a></li>
       <li><a href="/o-nas" data-nav-path="/o-nas" data-pl="O nas" data-en="About">O nas</a></li>
       <li><a href="/uslugi" data-nav-path="/uslugi" data-pl="Usługi" data-en="Services">Usługi</a></li>
-      <li><a href="/portfolio" data-nav-path="/portfolio" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
       <li><a href="/kontakt" data-nav-path="/kontakt" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
     </ul>
     <div class="nav-right">
@@ -80,7 +98,6 @@
   <a href="/" onclick="closeMenu()" data-pl="Start" data-en="Home">Start</a>
   <a href="/o-nas" onclick="closeMenu()" data-pl="O nas" data-en="About">O nas</a>
   <a href="/uslugi" onclick="closeMenu()" data-pl="Usługi" data-en="Services">Usługi</a>
-  <a href="/portfolio" onclick="closeMenu()" data-pl="Portfolio" data-en="Portfolio">Portfolio</a>
   <a href="/kontakt" onclick="closeMenu()" data-pl="Kontakt" data-en="Contact">Kontakt</a>
   <div class="mobile-lang">
     <button class="lang-btn" id="btn-pl-m" onclick="setLang('pl')">PL</button>
@@ -93,7 +110,7 @@
     <div class="container">
       <span class="tag" data-pl="Co oferujemy" data-en="What we offer">Co oferujemy</span>
       <h1 style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:.75rem" data-pl="Strony z abonamentem – bez ukrytych kosztów" data-en="Subscription websites – no hidden costs">Strony z abonamentem – bez ukrytych kosztów</h1>
-      <p style="color:var(--c-mid);margin-bottom:3rem;max-width:60ch" data-pl="Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i do 30 minut zmian miesięcznie wliczone w cenę. Zero niespodzianek." data-en="You pay once for the build, then a low monthly subscription. Hosting, domain, security certificate and up to 30 min of changes per month are all included. No surprises.">Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i do 30 minut zmian miesięcznie wliczone w cenę. Zero niespodzianek.</p>
+      <p style="color:var(--c-mid);margin-bottom:3rem;max-width:60ch" data-pl="Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i drobne zmiany treści wliczone w cenę. Zero niespodzianek." data-en="You pay once for the build, then a low monthly subscription. Hosting, domain, security certificate and minor content updates are all included. No surprises.">Płacisz raz za projekt, a następnie niski abonament miesięczny. Hosting, domena, certyfikat bezpieczeństwa i drobne zmiany treści wliczone w cenę. Zero niespodzianek.</p>
 
       <!-- PRICING TIERS -->
       <h2 style="margin-bottom:1.5rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-mid)" data-pl="Plany abonamentowe" data-en="Subscription plans">Plany abonamentowe</h2>
@@ -109,7 +126,7 @@
             <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
               <li data-pl="Hosting" data-en="Hosting">Hosting</li>
               <li data-pl="Domena + certyfikat bezpieczeństwa" data-en="Domain + security certificate">Domena + certyfikat bezpieczeństwa</li>
-              <li data-pl="Do 30 min zmian / mies." data-en="Up to 30 min changes / mo">Do 30 min zmian / mies.</li>
+              <li data-pl="Drobne zmiany treści w cenie" data-en="Minor content updates included">Drobne zmiany treści w cenie</li>
               <li data-pl="Formularz kontaktowy" data-en="Contact form">Formularz kontaktowy</li>
               <li data-pl="Responsywność i SEO on-page" data-en="Responsive &amp; on-page SEO">Responsywność i SEO on-page</li>
             </ul>
@@ -139,7 +156,7 @@
             <p data-pl="Wielostronicowa statyczna strona z integracjami zewnętrznymi – kalendarze rezerwacji, linki płatności, menu online, zamawianie dla restauracji i inne." data-en="Multi-page static site with external integrations – booking calendars, payment links, online menus, restaurant ordering, and more.">Wielostronicowa statyczna strona z integracjami zewnętrznymi – kalendarze rezerwacji, linki płatności, menu online, zamawianie dla restauracji i inne.</p>
             <ul style="font-size:.85rem;color:var(--c-mid);padding-left:1.2rem;margin:.75rem 0 1rem;display:flex;flex-direction:column;gap:.3rem">
               <li data-pl="Hosting, domena + certyfikat bezpieczeństwa" data-en="Hosting, domain + security certificate">Hosting, domena + certyfikat bezpieczeństwa</li>
-              <li data-pl="Do 30 min zmian / mies." data-en="Up to 30 min changes / mo">Do 30 min zmian / mies.</li>
+              <li data-pl="Drobne zmiany treści w cenie" data-en="Minor content updates included">Drobne zmiany treści w cenie</li>
               <li data-pl="Wiele podstron" data-en="Multiple pages">Wiele podstron</li>
               <li data-pl="Integracje zewnętrzne wg briefu" data-en="External integrations per brief">Integracje zewnętrzne wg briefu</li>
               <li data-pl="Responsywność i SEO on-page" data-en="Responsive &amp; on-page SEO">Responsywność i SEO on-page</li>
@@ -279,7 +296,7 @@
           <div class="step-num">5</div>
           <div class="step-content">
             <h3 data-pl="Projektowanie i realizacja" data-en="Design &amp; development">Projektowanie i realizacja</h3>
-            <p data-pl="Prezentujemy jedną kierunkową propozycję graficzną. W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN." data-en="We present one design direction. Two revision rounds are included. Each additional round costs 150–300 PLN.">Prezentujemy jedną kierunkową propozycję graficzną (nie kilka opcji do wyboru). W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN.</p>
+            <p data-pl="Prezentujemy jedną kierunkową propozycję graficzną. W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN." data-en="We present one design direction. Two revision rounds are included. Each additional round costs 150–300 PLN.">Prezentujemy jedną kierunkową propozycję graficzną. W cenie są 2 rundy poprawek. Każda kolejna runda to 150–300 PLN.</p>
           </div>
         </div>
         <div class="process-step">
@@ -331,7 +348,6 @@
         <h4 data-pl="Studio" data-en="Studio">Studio</h4>
         <ul>
           <li><a href="/o-nas" data-pl="O nas" data-en="About us">O nas</a></li>
-          <li><a href="/portfolio" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
           <li><a href="/kontakt" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
           <li><a href="mailto:kszostak1997@gmail.com">kszostak1997@gmail.com</a></li>
           <li><a href="tel:+48733733404">+48 733 733 404</a></li>
@@ -339,7 +355,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 StudioWWW. <span data-pl="Wszelkie prawa zastrzeżone." data-en="All rights reserved.">Wszelkie prawa zastrzeżone.</span></p>
+      <p>© 2026 StudioWWW. <span data-pl="Wszelkie prawa zastrzeżone." data-en="All rights reserved.">Wszelkie prawa zastrzeżone.</span></p>
       <p style="color:rgba(255,255,255,.25);font-size:.7rem">Szczecin, Poland</p>
     </div>
   </div>
